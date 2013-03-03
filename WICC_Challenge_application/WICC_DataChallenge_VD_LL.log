@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2013.2.22)  1 MAR 2013 00:33
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2013.2.22)  3 MAR 2013 23:06
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -294,18 +294,18 @@ Package: ulem 2012/05/18
 (./WICC_DataChallenge_VD_LL.aux)
 \openout1 = `WICC_DataChallenge_VD_LL.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
 
 (/usr/local/texlive/2012/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -355,27 +355,80 @@ LaTeX Font Info:    ... okay on input line 27.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 29.
+! Missing $ inserted.
+<inserted text> 
+                $
+l.35 \maketitle
+               
+? 
+LaTeX Font Info:    Try loading font information for U+msa on input line 35.
 (/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 29.
+LaTeX Font Info:    Try loading font information for U+msb on input line 35.
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 31--36
+! Missing delimiter (. inserted).
+<to be read again> 
+                   \let 
+l.35 \maketitle
+               
+? 
+Package epstopdf Info: Source file: <logoEWS.eps>
+(epstopdf)                    date: 2013-03-03 23:04:34
+(epstopdf)                    size: 591578 bytes
+(epstopdf)             Output file: <logoEWS-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-03-03 23:04:43
+(epstopdf)                    size: 105698 bytes
+(epstopdf)             Command: <epstopdf --outfile=logoEWS-eps-converted-to.pd
+f logoEWS.eps>
+(epstopdf)             \includegraphics on input line 35.
+Package epstopdf Info: Output file is already uptodate.
+<logoEWS-eps-converted-to.pdf, id=1, 174.6525pt x 106.3975pt>
+File: logoEWS-eps-converted-to.pdf Graphic file (type pdf)
+
+<use logoEWS-eps-converted-to.pdf>
+Package pdftex.def Info: logoEWS-eps-converted-to.pdf used on input line 35.
+(pdftex.def)             Requested size: 139.72218pt x 85.1181pt.
+
+! Missing \right. inserted.
+<inserted text> 
+                \right .
+l.35 \maketitle
+               
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.35 \maketitle
+               
+? 
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.35 \maketitle
+               
+? 
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--43
 
  []
 
 ! Misplaced alignment tab character &.
-l.40 ...or an approaching tipping point (van Nes &
+l.47 ...or an approaching tipping point (van Nes &
                                                    Scheffer 2007) (Fig. 1 a1...
 
 ? 
 [1
 
-{/usr/local/texlive/2012/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+{/usr/local/texlive/2012/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./logoE
+WS-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <figure1.eps>
 (epstopdf)                    date: 2013-02-28 12:42:25
 (epstopdf)                    size: 2100362 bytes
@@ -384,50 +437,52 @@ Package epstopdf Info: Source file: <figure1.eps>
 (epstopdf)                    size: 147012 bytes
 (epstopdf)             Command: <epstopdf --outfile=figure1-eps-converted-to.pd
 f figure1.eps>
-(epstopdf)             \includegraphics on input line 44.
+(epstopdf)             \includegraphics on input line 51.
 Package epstopdf Info: Output file is already uptodate.
 
-<figure1-eps-converted-to.pdf, id=16, 516.93124pt x 368.37625pt>
+<figure1-eps-converted-to.pdf, id=19, 516.93124pt x 368.37625pt>
 File: figure1-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figure1-eps-converted-to.pdf>
-Package pdftex.def Info: figure1-eps-converted-to.pdf used on input line 44.
+Package pdftex.def Info: figure1-eps-converted-to.pdf used on input line 51.
 (pdftex.def)             Requested size: 413.54555pt x 294.70139pt.
 
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 ! Misplaced alignment tab character &.
-l.51 ...se in autocorrelation}} (Ives 1995; Held &
+l.58 ...se in autocorrelation}} (Ives 1995; Held &
                                                    Kleinen 2004): the state ...
 
 ? 
 ! Misplaced alignment tab character &.
-l.51 ...ion in the pattern of fluctuations (Held &
+l.58 ...ion in the pattern of fluctuations (Held &
                                                    Kleinen 2004). Second, th...
 
 ? 
 ! Misplaced alignment tab character &.
-l.51 ...{\textbf{increase in variance}} (Van Nes &
+l.58 ...{\textbf{increase in variance}} (Van Nes &
                                                    Scheffer 2003; Carpenter ...
 
 ? 
 ! Misplaced alignment tab character &.
-l.51 ...ce}} (Van Nes & Scheffer 2003; Carpenter &
+l.58 ...ce}} (Van Nes & Scheffer 2003; Carpenter &
                                                    Brock 2006) prior to a ti...
 
 ? 
 ! Misplaced alignment tab character &.
-l.51 ...t{\textbf{increase in skewness}} (Guttal &
+l.58 ...t{\textbf{increase in skewness}} (Guttal &
                                                    Jayaprakash 2008) in the ...
 
 ? 
-[2 <./figure1-eps-converted-to.pdf>]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 57.
-
-(/usr/local/texlive/2012/texmf-dist/tex/latex/base/omscmr.fd
+[2]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 64.
+ (/usr/local/texlive/2012/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 57.
-
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 64.
+ [3 <./figure1-eps-converted-to.pdf>]
 
 ! LaTeX Error: There's no line here to end.
 
@@ -435,12 +490,9 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.65 ... by the Early Warning Signals Toolbox}  \\
+l.72 ... by the Early Warning Signals Toolbox}  \\
                                                    [1ex]
 ? 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 
 ! Package inputenc Error: Keyboard character used is undefined
 (inputenc)                in inputencoding `latin1'.
@@ -449,36 +501,39 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.103    spé
+l.110    spé
             cifications (RShiny background,,,)
 ? 
-[3] [4] (./WICC_DataChallenge_VD_LL.aux) ) 
+[4] (./WICC_DataChallenge_VD_LL.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 4015 strings out of 493488
- 53320 string characters out of 3141326
- 118445 words of memory out of 3000000
- 7230 multiletter control sequences out of 15000+200000
+ 4021 strings out of 493488
+ 53469 string characters out of 3141326
+ 118512 words of memory out of 3000000
+ 7235 multiletter control sequences out of 15000+200000
  20713 words of font info for 59 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 42i,8n,32p,1744b,272s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/local/texlive/2012/texmf-dist/f
-onts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2012/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2012/texmf-dist/font
-s/type1/public/cm-super/sfbi1200.pfb></usr/local/texlive/2012/texmf-dist/fonts/
-type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2012/texmf-dist/fonts/ty
-pe1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2012/texmf-dist/fonts/type
-1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/
-public/cm-super/sfrm0700.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/pu
-blic/cm-super/sfrm0800.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/publ
-ic/cm-super/sfrm1000.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public
-/cm-super/sfrm1200.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/c
-m-super/sfrm1440.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/cm-
-super/sfrm2074.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/cm-su
-per/sfti1200.pfb>
-Output written on WICC_DataChallenge_VD_LL.pdf (4 pages, 306546 bytes).
+ 42i,9n,32p,1748b,359s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/local/texlive/2012/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
+</usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
+/usr/local/texlive/2012/texmf-dist/fonts/type1/public/cm-super/sfbi1200.pfb></u
+sr/local/texlive/2012/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr
+/local/texlive/2012/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/l
+ocal/texlive/2012/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/loc
+al/texlive/2012/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local
+/texlive/2012/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/t
+exlive/2012/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/tex
+live/2012/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texli
+ve/2012/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive
+/2012/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb></usr/local/texlive/2
+012/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
+Output written on WICC_DataChallenge_VD_LL.pdf (4 pages, 400029 bytes).
 PDF statistics:
- 74 PDF objects out of 1000 (max. 8388607)
- 53 compressed objects within 1 object stream
+ 78 PDF objects out of 1000 (max. 8388607)
+ 55 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

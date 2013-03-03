@@ -19,14 +19,21 @@
 \usepackage{color,ulem} % package for text color comments
 
 \author{Vasilis Dakos and Leo Lahti}
+
 \title{
+\begin{figure}[h]
+\begin{left}
+\includegraphics[scale=0.8]{logoEWS.eps}
+\end{left}
+\end{figure}
+\\
 Early Warning Signals Toolbox: 
 \\ A novel approach for Detecting Critical Transitions
 }
 
 \begin{document}
-
 \maketitle
+
 \section{In an nutshell} %Overview
 Critical transitions have been identified in seemingly disparate systems ranging from ecology and climate to medicine and finance (Scheffer et al. 2001; Scheffer 2009). %Global finance occasionally suffers from market crashes (May et al. 2008), while asthma attacks (Venegas et al. 2005) and epileptic seizures (McSharry et al. 2003) are examples of sudden medical systemic failures. Abrupt shifts in ocean circulation have occurred in the past climate (Rahmstorf 2002) and may be triggered again under present trends of global environmental conditions (Lenton et al. 2008).
 Acknowledging the existence of such critical transitions is only the first step for avoiding them. What we are currently lacking, though, are tools that we can use to foresee such upcoming transitions. Being able to quantify the probability of a critical transition happening would be of unperceived value. Unfortunately, for most systems, we neither have enough records of past transitions nor reliable models to study their behavior. Nonetheless, recent work has proposed an alternative, novel way of approaching this challenge. What if, instead of building case-specific models or indicators, we could be able to measure the resilience of a system- and thus its proximity to a critical transition- using a more generic approach? Complex systems theory appears to have provided us with a potential solution: \textit{\textbf{generic early-warning signals}} for critical transitions (Scheffer et al. 2009). 
@@ -48,7 +55,7 @@ A simple way to understand why we should expect early warnings before critical t
 \end{figure}
 
 \subsection{What are Early Warning Signals?}
-While an increase in recovery time after a disturbance is the most direct indicator of the vicinity to a tipping point, for most natural systems it will be very difficult to measure it systematically. Take for instance the impossibility of conducting a perturbation experiment for measuring the resilience of the thermohaline circulation. The fact, however, that all systems are permanently subjected to natural perturbations allows us to identify an approaching tipping point indirectly. First, slowing down leads to an \textit{\textbf{increase in autocorrelation}} (Ives 1995; Held & Kleinen 2004): the state of the system resembles its previous state when it is close to a tipping point (Fig. 1 a2-b2). The resulting increase in `memory' of the system can be measured in the frequency spectrum of the system by simply looking at lag-1 autocorrelation in the pattern of fluctuations (Held & Kleinen 2004). Second, there is an \textit{\textbf{increase in variance}} (Van Nes & Scheffer 2003; Carpenter & Brock 2006) prior to a tipping point: the state of the system will fluctuate more widely around its equilibrium. As perturbations accumulate and are not damped fast enough due to critical slowing down, the variance in the state of the system increases (Fig. 1 a3-b3). Also, the basin of attraction usually, but not necessarily, becomes asymmetric close to a transition (Scheffer et al. 2009) (Fig. 1 a-b). Such asymmetry causes the state of the system to spend more time in the flatter part of the attraction basin. As a result there is an \textit{\textbf{increase in skewness}} (Guttal & Jayaprakash 2008) in the distribution of the monitored system state before a transition (Fig. 1 a4-b4).
+While an increase in recovery time after a disturbance is the most direct indicator of the vicinity to a tipping point, for most natural systems it will be very difficult to measure it systematically. Take for instance the impossibility of conducting a perturbation experiment for measuring the resilience of the thermohaline circulation. The fact, however, that all systems are permanently subjected to natural perturbations allows us to identify an approaching tipping point indirectly. First, slowing down leads to an \textit{\textbf{increase in autocorrelation}} (Ives 1995; Held & Kleinen 2004): the state of the system resembles its previous state when it is close to a tipping point (Fig. 1 a2, b2). The resulting increase in `memory' of the system can be measured in the frequency spectrum of the system by simply looking at lag-1 autocorrelation in the pattern of fluctuations (Held & Kleinen 2004). Second, there is an \textit{\textbf{increase in variance}} (Van Nes & Scheffer 2003; Carpenter & Brock 2006) prior to a tipping point: the state of the system will fluctuate more widely around its equilibrium. As perturbations accumulate and are not damped fast enough due to critical slowing down, the variance in the state of the system increases (Fig. 1 a3, b3). Also, the basin of attraction usually, but not necessarily, becomes asymmetric close to a transition (Scheffer et al. 2009) (Fig. 1 a, b). Such asymmetry causes the state of the system to spend more time in the flatter part of the attraction basin. As a result there is an \textit{\textbf{increase in skewness}} (Guttal & Jayaprakash 2008) in the distribution of the monitored system state before a transition (Fig. 1 a4, b4).
 
 \section{The Early Warning Signals Toolbox - Application}
 \subsection{General characteristics}
