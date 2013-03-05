@@ -42,7 +42,7 @@ qda_ews <- function(timeseries, winsize = 50, detrending=c("no","gaussian","line
   g <- generic_RShiny(timeseries,winsize,detrending,bandwidth=NULL,logtransform=FALSE,interpolate=FALSE,AR_n=FALSE,powerspectrum=FALSE)
 
   print("Sensitivity of trends")
-  s <- sensitivity_RShiny(timeseries,winsizerange=c(25,75),incrwinsize,detrending=detrending, bandwidthrange=c(5,100),incrbandwidth,logtransform=FALSE,interpolate=FALSE)
+  s <- sensitivity_RShiny(timeseries,winsizerange=c(10,90),incrwinsize,detrending=detrending, bandwidthrange=c(5,200),incrbandwidth,logtransform=FALSE,interpolate=FALSE)
   
   print("Potential Analysis")
   param = seq(from = 1, to = length(timeseries), by =1)

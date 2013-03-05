@@ -10,6 +10,8 @@
 \usepackage{graphicx,epstopdf}
 \usepackage{subfigure}
 \usepackage[verbose,a4paper,tmargin=2.4cm,bmargin=2.4cm,lmargin=2.4cm,rmargin=2.4cm]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{url}
 \usepackage{setspace}
 %\doublespacing
 
@@ -23,7 +25,7 @@
 \title{
 \begin{figure}[h]
 \begin{left}
-\includegraphics[scale=0.8]{logoEWS.eps}
+\includegraphics[scale=0.55]{logoEWS.eps}
 \end{left}
 \end{figure}
 \\
@@ -39,7 +41,7 @@ Critical transitions have been identified in seemingly disparate systems ranging
 Acknowledging the existence of such critical transitions is only the first step for avoiding them. What we are currently lacking are tools that we can use to foresee such upcoming transitions. Being able to quantify the probability of a critical transition happening would be of unperceived value. Unfortunately, for most systems, we neither have enough records of past transitions nor reliable models to study their behavior. Nonetheless, recent work has proposed an alternative, novel way of approaching this challenge. What if, instead of building case-specific models or indicators, we could be able to measure the resilience of a system- and thus its proximity to a critical transition- using a more generic approach? Complex systems theory appears to have provided us with a potential solution: \textit{\textbf{generic early-warning signals}} for critical transitions (Scheffer et al. 2009). 
 \\
 \\
-Here, we present our newly developed \textbf{Early Warning Signal Toolbox} designed for the \textbf{estimation} and \textbf{visualization} of fingerprints of upcoming critical transitions from time series data. Our toolbox is characterized by three unique features. \textit{\textbf{First}}, it is of truly generic nature which means that it can be used for any type of system that may experience a critical transition. \textit{\textbf{Second}}, it is based on highly sophisticated published methods that have been already tested in real world cases. \textit{\textbf{Third}}, it is easy to use and it is developed under a  open-access, widely-used, statistical program (R Project for Statistical Computing\footnote{http://www.r-project.org}). In what follows we explain in laymen terms the theory behind the development of our toolbox, we present how the toolbox works by providing an example, and we explain how this toolbox can have broader benefits for the understanding and management of complex systems in the future.  
+Here, we present our newly developed \textbf{Early Warning Signal Toolbox} designed for the \textbf{estimation} and \textbf{visualization} of fingerprints of upcoming critical transitions from time series data. Our toolbox is characterized by three unique features. \textit{\textbf{First}}, it is of truly generic nature which means that it can be used for any type of system that may experience a critical transition. \textit{\textbf{Second}}, it is based on highly sophisticated published methods that have been already tested in real world cases. \textit{\textbf{Third}}, it is easy to use and it is developed under an open-access, widely-used, statistical program (R Project for Statistical Computing\footnote{http://www.r-project.org}). In what follows we explain in laymen terms the theory behind the development of our toolbox, we present how the toolbox works by providing an example, and we propose how this toolbox can have broader benefits for the understanding and management of complex systems in the future.  
 
 \section{The Early Warning Signals Toolbox - Theory} 
 
@@ -59,7 +61,7 @@ While an increase in recovery time after a disturbance is the most direct indica
 
 \section{The Early Warning Signals Toolbox - Application}
 \subsection{General characteristics}
-The Early Warning Signals Toolbox is designed to \textbf{estimate} and \textbf{visualize} a series of \textbf{14 different indicators} that reflect the above-described distinct changes in the signal properties of a system prior to a critical transition (Table 1). In particular:
+The Early Warning Signals Toolbox is designed to \textbf{estimate} and \textbf{visualize} a series of \textbf{14 different indicators} that reflect the effects of critical slowing down in the signal properties of a system prior to a critical transition (Table 1). In particular:
 \begin{itemize}
 \item The toolbox works with time series collected by monitoring the state of a system that we suspect it might undergo a critical transition. It requires no more information to a practitioner other than the time series derived from the system.
 \item There is no restriction in the type of data that can be processed. Time series may be temperature data, nutrient concentrations, brain activity, stock marker indices or similar. 
@@ -96,21 +98,41 @@ Potential analysis	\\ [0.5ex]%&		&		&	x	\\ [1ex]
 \end{table}%
 
 \subsection{An example}
-We are not going here to present the full capacity of our toolbox. Instead, we are going to focus only on a subset of flagship indicators that are the most promising for the detection of critical transitions. For this, the toolbox provides a \textbf{Quick Detection Analysis (QDA)} that we are going to demonstrate in detail.
-   
-   
-   data sources
-   time series - here examples
-   
-\textcolor{blue}{(short video that only goes with the example?)}
-   
+Consider the example of a time series that represents a resource that due to increased harvesting is facing the risk of reaching a point of no return at which resource biomass tips to overexploitation (Fig. 2a). Typically, the managing institution of that resource (be it grazing grounds, or fish stocks) has been monitoring the resource prior to the regime shift (Fig. 2b). Despite the fact that the manager is aware of changes in the driving harvesting pressure and the biomass of the resource is slightly declining, it is difficult to assess the resilience of the system in order to take some action. Imagine now, though, that the manager runs the \textbf{\textit{Early Warning Signal Toolbox}} online on her personal computer to get an idea of whether the resource may be losing resilience and approaching a tipping point. Interestingly, the manager will find out that after removing the slow declining trend in mean biomass (red line in Fig. 2b), the residuals of filtering (Fig. 2c) appear to show a rise in autocorrelation and variance (Fig. 2d). Sensitivity analysis to the parameters of the time series analysis don't change that result: different parameter choices give positive trends in autocorrelation and variance (Fig. 2e). The system indeed seems to be close to tipping, resilience is low. Has there also an alternative attractor already appeared? Potential analysis doesn't show so (Fig. 2f). Still the resource is riding the current stable state. Perhaps there is a chance to control the driver and avoid the further undermining of the resilience of the system. 
+\\
+\\
+This is only part of what our toolbox can perform called the \textbf{Quick Detection Analysis (QDA)}. Here we focus only on it as it estimates the flagship indicators for the detection of critical transitions, but we refer to the full capacity of our toolbox below [\ref{sec:resources}].
+\\
+\\ 
+\textbf{QDA} performs three operations:
+\begin{enumerate}
+\item An \textbf{Indicator trends analysis} of autocorrelation and variance in rolling windows along a time series that can be pre-treated in multiple ways. The practitioner can select to log-transform or interpolate data (if there are missing values or the data are unevenly spaced) (Fig. 2, Box 1), as well as filter the data using smooth, linear, or first-difference detrending from a drop-down menu (Fig. 2, Box 2). In addition, it is possible to choose the size of the rolling window as a percentage of the total time series length with the help of a scroll bar (i.e. choosing a value of 50 the early warnings are estimated with rolling windows half the size of the time series, Fig. 2 upper panel, Box 3).
+\item A  \textbf{Trend sensitivity analysis} of autocorrelation and variance. Two scroll bars allow the user to choose the steps for incrementally changing the size of the rolling window and the bandwidth for the smoothing in order to (Fig. 2 middle panel, Box 4, 5). 
+\item A \textbf{Potential analysis} to identify alternative attractors by reconstructing a potential landscape from the data. The cutoff level for the estimation of the attractors can be chosen from 0.01 to 0.5 - a low cutoff level makes the method sensitive and increases the chance of recognizing alternative attractors (Fig. 2 lower panel, Box 6).
+\end{enumerate}
+\\
+\\
+Simulated data make a nice illustration, but what about real world examples? Go to the application, choose \textit{real climate data} from the drop-down menu and try it yourself!
+\\
+\\
+\textcolor{blue}{here I am imagining fig 2 to be a product of RShiny (should we also add a short video that only goes with the example?)}
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=0.8]{scheme_RShiny_v3.eps}
+\caption{Demo Quick Detection Analysis in RShiny}
+\end{center}
+\label{fig:demoQDA}
+\end{figure}
+
 \subsection{Resources} 
-   
-   (webpage, CRAN package, github)
-   spécifications (RShiny background,,,)
-   
-   5. there is a whole support material (webpage, tutorials, methodological papers)
-   
+\label{sec:resources}
+Apart from the toolbox per se, we have developed a complete set of resources available to any practitioner interested in understanding the methodology, using the application, but also contributing to it. In particular, we have a dedicated  \textbf{webpage}\footnote{\url{http://www.early-warning-signals.org}} that hosts all background theoretical and practical information, contains original publications, demonstrates case studies of applying the methods, and provides updates to the science and the community around the theme of early warnings and critical transitions. The toolbox is developed in \textit{R}, the most widely used statistical language and hosted in \textbf{CRAN repository}\footnote{\url{http://cran.r-project.org/web/packages/earlywarnings/index.html}}, which means that it is available to download on any operating system and distributed freely. Lastly, we have hosted the development part of our toolbox on \textbf{github}\footnote{\url{https://github.com/earlywarningtoolbox}}: an open-access, free-sharing platform that allows any interested party to contribute to its further development.
+
+%\href{http://www.early-warning-signals.org}{webpage}
+%\href{http://cran.r-project.org/web/packages/earlywarnings/index.html}{CRAN repository}, 
+%\href{https://github.com/earlywarningtoolbox}{github}
+
 \section{Potential impact and future perspectives}
 One of the most distinct features of our proposed toolbox is its dynamic character and complimentary functionality.
 
