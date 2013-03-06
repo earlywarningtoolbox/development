@@ -10,8 +10,10 @@
 #'    @param winsize is the size of the rolling window expressed as percentage of the timeseries length (must be numeric between 0 and 100). Default is 50\%.
 #'    @param detrending the timeseries can be detrended/filtered prior to analysis. There are four options: \code{gaussian} filtering, \code{linear} detrending and \code{first-differencing}. Default is \code{no} detrending.
 #'    @param bandwidth is the bandwidth used for the Gaussian kernel when gaussian filtering is applied. It is expressed as percentage of the timeseries length (must be numeric between 0 and 100). Alternatively it can be given by the bandwidth selector \code{\link{bw.nrd0}} (Default).
-#'    @param incrwinsize increments the rolling window size (must be numeric between 0 and 100). Default is 25.
-#'    @param incrbandwidth is the size to increment the bandwidth used for the Gaussian kernel when gaussian filtering is applied. It is expressed as percentage of the timeseries length (must be numeric between 0 and 100). Default is 20.
+#    @param incrwinsize increments the rolling window size (must be numeric between 0 and 100). Default is 25.
+#'    @param boots the number of surrogate data. Default is 100.
+#'    @param s_level significance level. Default is 0.05.
+#    @param incrbandwidth is the size to increment the bandwidth used for the Gaussian kernel when gaussian filtering is applied. It is expressed as percentage of the timeseries length (must be numeric between 0 and 100). Default is 20.
 #'    @param cutoff the cuttof value to estimate minima and maxima in the potential
 #'    @param logtransform logical. If TRUE data are logtransformed prior to analysis as log(X+1). Default is FALSE.
 #'    @param interpolate logical. If TRUE linear interpolation is applied to produce a timeseries of equal length as the original. Default is FALSE (assumes there are no gaps in the timeseries).
@@ -29,25 +31,32 @@
 # '
 # ' @examples 
 # ' data(foldbif)
-# ' out=generic_ews(foldbif,winsize=50,detrending="gaussian",
-# ' bandwidth=5,logtransform=FALSE,interpolate=FALSE)
+# ' qda_ews(foldbif, winsize = 50, detrending="gaussian", bandwidth=NULL, boots = 100, s_level = 0.05, cutoff=0.5, logtransform=FALSE, interpolate=FALSE)
 # ' @keywords early-warning
 
 # Author: Vasilis Dakos, Leo Lahti, March 1, 2013
 
 
-qda_ews <- function(timeseries, winsize = 50, detrending=c("no","gaussian","linear","first-diff"), bandwidth=NULL, incrwinsize=25, incrbandwidth=20, cutoff=0.5, logtransform=FALSE, interpolate=FALSE){
+qda_ews <- function(timeseries, winsize = 50, detrending=c("no","gaussian","linear","first-diff"), bandwidth=NULL, boots = 100, s_level = 0.05, cutoff=0.05, logtransform=FALSE, interpolate=FALSE){
   
   timeseries<-data.matrix(timeseries)
   
   print("Generic Indicators")
-  g <- generic_RShiny(timeseries,winsize,detrending,bandwidth=NULL,logtransform=FALSE,interpolate=FALSE,AR_n=FALSE,powerspectrum=FALSE)
+  g <- generic_RShiny(timeseries,winsize,detrending,bandwidth,logtransform,interpolate,AR_n=FALSE,powerspectrum=FALSE)
 
-  print("Sensitivity of trends")
-  s <- sensitivity_RShiny(timeseries,winsizerange=c(25,75),incrwinsize,detrending=detrending, bandwidthrange=c(5,100),incrbandwidth,logtransform=FALSE,interpolate=FALSE)
+#   print("Sensitivity of trends")
+#   s <- sensitivity_RShiny(timeseries,winsizerange=c(25,75),incrwinsize,detrending=detrending, bandwidthrange=c(5,100),incrbandwidth,logtransform=FALSE,interpolate=FALSE)
+#   
+#   print("Significance of trends")
+#   s <- surrogates_RShiny(timeseries,winsize,detrending,bandwidth,boots,s_level,logtransform,interpolate)
   
   print("Potential Analysis")
   param = seq(from = 1, to = length(timeseries[,1]), by =1)
-  m <- movpotential_ews(timeseries, param, sdwindow = NULL, bw = -1, minparam = NULL, maxparam = NULL, npoints = 50, thres = 0.002, std = 1, grid.size = 200, cutoff)
+  if (dim(timeseries)[2]==2){
+    dataset = timeseries[,2]
+  }else{
+    dataset = timeseries[,1]
+  }
+  m <- movpotential_ews(dataset, param, sdwindow = NULL, bw = -1, minparam = NULL, maxparam = NULL, npoints = 50, thres = 0.002, std = 1, grid.size = 200, cutoff)
   m
 }

@@ -2,7 +2,7 @@
 # 26 Feb 2013
 
 
-generic_RShiny<-function(timeseries,winsize=50,detrending=c("no","gaussian","linear","first-diff"),bandwidth=NULL,logtransform=FALSE,interpolate=FALSE,AR_n=FALSE,powerspectrum=FALSE){	
+generic_RShiny<-function(timeseries,winsize=50,detrending=c("no","gaussian","linear","first-diff"),bandwidth,logtransform,interpolate,AR_n=FALSE,powerspectrum=FALSE){	
 	
 	require(lmtest)
 	require(nortest)
@@ -98,7 +98,7 @@ generic_RShiny<-function(timeseries,winsize=50,detrending=c("no","gaussian","lin
 	}
 	if(detrending=="no"){
 		plot(c(0,1),c(0,1),ylab="",xlab="",yaxt="n",xaxt="n",type="n",las=1)
-		text(0.5,0.5,"no residuals - no detrending")
+		text(0.5,0.5,"no detrending - no residuals")
 		}else if (detrending=="first-diff"){
 		limit<-max(c(max(abs(nsmY))))
 		plot(timeindexdiff,nsmY,ylab="",xlab="",type="l",xaxt="n",lwd=2,las=1,ylim=c(-	limit,limit),xlim=c(timeindexdiff[1],timeindexdiff[length(timeindexdiff)]))

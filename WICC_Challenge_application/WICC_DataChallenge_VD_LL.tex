@@ -97,7 +97,7 @@ Potential analysis	\\ [0.5ex]%&		&		&	x	\\ [1ex]
 \end{table}%
 
 \subsection{An example}
-Consider a time series that represents a resource that due to increased harvesting is facing the risk of reaching a point of no return at which resource biomass tips to overexploitation (Fig. 2a). Typically, the managing institution of that resource (be it grazing grounds, or fish stocks) has been monitoring the resource prior to the regime shift (Fig. 2 green part - upper left panel). Despite the fact that the manager is aware of changes in the driving harvesting pressure and the biomass of the resource is slightly declining, it is difficult to assess the resilience of the system in order to take some action. Imagine now, though, that the manager runs the \textbf{\textit{Early Warning Signal Toolbox}} online on her personal computer to get an idea of whether the resource may be losing resilience and approaching a tipping point. Interestingly, the manager will find out that after removing the slow declining trend in mean biomass (red line in Fig. 2A1), the residuals of filtering (Fig. 2A2) appear to show a rise in autocorrelation and variance (Fig. 2A3,4). Sensitivity analysis to the parameters of the time series analysis don't change that result: different parameter choices give positive trends in autocorrelation and variance (Fig. 2B). The system indeed seems to be close to tipping, resilience is low. Has there also an alternative attractor already appeared? Potential analysis doesn't show so (Fig. 2C). Still the resource is riding the current stable state. Perhaps there is a chance to control the driver and avoid the further undermining of the resilience of the system. 
+Consider a time series that represents a resource that due to increased harvesting is facing the risk of reaching a point of no return at which resource biomass tips to overexploitation (Fig. 2a). Typically, the managing institution of that resource (be it grazing grounds, or fish stocks) has been monitoring the resource prior to the regime shift (Fig. 2 green part - upper left panel). Despite the fact that the manager is aware of changes in the driving harvesting pressure and the biomass of the resource is slightly declining, it is difficult to assess the resilience of the system in order to take some action. Imagine now, though, that the manager runs the \textbf{\textit{Early Warning Signal Toolbox}} online on her personal computer to get an idea of whether the resource may be losing resilience and approaching a tipping point. Interestingly, the manager will find out that after removing the slow declining trend in mean biomass (red line in Fig. 2Ai), the residuals of filtering (Fig. 2Aii) appear to show a rise in autocorrelation and variance (Fig. 2Aiii,iv). Sensitivity analysis to the parameters of the time series analysis don't change that result: different parameter choices give positive trends in autocorrelation and variance (Fig. 2B). The system indeed seems to be close to tipping, resilience is low. Has there also an alternative attractor already appeared? Potential analysis doesn't show so (Fig. 2C). Still the resource is riding the current stable state. Perhaps there is a chance to control the driver and avoid the further undermining of the resilience of the system. 
 
 %\begin{figure}[ht]
 %\begin{center}
@@ -109,8 +109,8 @@ Consider a time series that represents a resource that due to increased harvesti
 
 \begin{figure}[ht]
 \begin{center}
-\includegraphics[scale=0.8]{fig_2_new.eps}
-\caption{Demo Quick Detection Analysis in simulated data prior to shift to overexploitation}
+\includegraphics[scale=0.8]{fig_2_simulated_970pts.eps}
+\caption{Demo Quick Detection Analysis in simulated data prior to shifting to overexploitation}
 \end{center}
 \label{fig:simulatedQDA}
 \end{figure}
@@ -127,15 +127,15 @@ This is only part of what our toolbox can perform called the \textbf{Quick Detec
 \end{enumerate}
 \\
 \\
-Simulated data make a nice illustration, but what about real world examples? Go to the application, choose \textit{real climate data} from the drop-down menu, follow the parameters from Figure 3, and try yourself to detect the exit from the Younger Dryas around 11,500 ago (Fig. 2b)! 
+Simulated data make a nice illustration, but what about real world examples? Go to the application, choose \textit{real climate data} from the drop-down menu, follow the parameters from Figure 3, and try yourself to detect the exit from the Younger Dryas around 11,500 ago! 
 \\
 \\
-\textcolor{blue}{here I am imagining fig 2 to be a product of RShiny (should we also add a short video that only goes with the example?)}
+\textcolor{blue}{here I am imagining fig 2 and 3 to be a product of RShiny (should we also add a short video that only goes with the example?)}
 
 \begin{figure}[h]
 \begin{center}
-\includegraphics[scale=0.8]{fig_3_new.eps}
-\caption{Quick Detection Analysis in the climate record prior to the exit of the Younger Dryas}
+\includegraphics[scale=0.8]{fig_3_climatedata.eps}
+\caption{Quick Detection Analysis in the climate record prior to the exit from the Younger Dryas around 11,500 ago.}
 \end{center}
 \label{fig:QDA_climate}
 \end{figure}
