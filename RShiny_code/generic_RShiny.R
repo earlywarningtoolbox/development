@@ -23,7 +23,7 @@ generic_RShiny<-function(timeseries,winsize=50,detrending=c("no","gaussian","lin
 		}else{
 		warning("not right format of timeseries input")
 		}
-		
+		#return(timeindex)
 	# Interpolation
 	if (interpolate){
 		YY<-approx(timeindex,Y,n=length(Y),method="linear")
@@ -41,9 +41,12 @@ generic_RShiny<-function(timeseries,winsize=50,detrending=c("no","gaussian","lin
 		if (is.null(bandwidth)){
 			bw<-round(bw.nrd0(timeindex))}else{
 			bw<-round(length(Y)*bandwidth/100)}
-			smYY<-ksmooth(timeindex,Y,kernel="normal",bandwidth=bw, 		range.x=range(timeindex),x.points=timeindex)
-		nsmY<-Y-smYY$y
-		smY<-smYY$y
+			smYY<-ksmooth(timeindex,Y,kernel="normal",bandwidth=bw,range.x=range(timeindex),x.points=timeindex)
+    if (timeindex[1]>timeindex[length(timeindex)]){
+      nsmY<-Y-rev(smYY$y)
+      smY<-rev(smYY$y) 
+    }else{  	nsmY<-Y-smYY$y
+             smY<-smYY$y}
 	}else if(detrending=="linear"){
 		nsmY<-resid(lm(Y~timeindex))
 		smY<-fitted(lm(Y~timeindex))

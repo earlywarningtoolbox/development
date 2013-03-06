@@ -38,14 +38,16 @@
 
 qda_ews <- function(timeseries, winsize = 50, detrending=c("no","gaussian","linear","first-diff"), bandwidth=NULL, incrwinsize=25, incrbandwidth=20, cutoff=0.5, logtransform=FALSE, interpolate=FALSE){
   
+  timeseries<-data.matrix(timeseries)
+  
   print("Generic Indicators")
   g <- generic_RShiny(timeseries,winsize,detrending,bandwidth=NULL,logtransform=FALSE,interpolate=FALSE,AR_n=FALSE,powerspectrum=FALSE)
 
   print("Sensitivity of trends")
-  s <- sensitivity_RShiny(timeseries,winsizerange=c(10,90),incrwinsize,detrending=detrending, bandwidthrange=c(5,200),incrbandwidth,logtransform=FALSE,interpolate=FALSE)
+  s <- sensitivity_RShiny(timeseries,winsizerange=c(25,75),incrwinsize,detrending=detrending, bandwidthrange=c(5,100),incrbandwidth,logtransform=FALSE,interpolate=FALSE)
   
   print("Potential Analysis")
-  param = seq(from = 1, to = length(timeseries), by =1)
+  param = seq(from = 1, to = length(timeseries[,1]), by =1)
   m <- movpotential_ews(timeseries, param, sdwindow = NULL, bw = -1, minparam = NULL, maxparam = NULL, npoints = 50, thres = 0.002, std = 1, grid.size = 200, cutoff)
   m
 }

@@ -1,7 +1,7 @@
 # sensitivity_Rshiny for estimating sensitivity for variance and autocorrelation
 # 26 Feb 2013
 
-sensitivity_RShiny<-function(timeseries,winsizerange=c(25,75),incrwinsize=25,detrending=c("no","gaussian","linear","first-diff"),bandwidthrange=c(5,100),incrbandwidth=20,logtransform=FALSE,interpolate=FALSE){
+sensitivity_RShiny<-function(timeseries,winsizerange,incrwinsize,detrending=c("no","gaussian","linear","first-diff"),bandwidthrange,incrbandwidth,logtransform=FALSE,interpolate=FALSE){
 
 	  timeseries<-data.matrix(timeseries)
     if (dim(timeseries)[2]==1){
