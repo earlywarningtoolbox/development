@@ -5,12 +5,16 @@ shinyServer(function(input, output) {
  
 dataset <- reactive(function() {
   #mydata[sample(nrow(mydata), input$sampleSize),]
-  mydata
+  #mydata
+  timeseries
 })
  
 output$plot <- reactivePlot(function() {
   #p <- ggplot(dataset(), aes_string(x=input$x, y=input$y)) + geom_point()
-  p <- ggplot(dataset(), aes_string(x=input$y)) + geom_histogram()
+  #p <- ggplot(dataset(), aes_string(x=input$y)) + geom_histogram()
+
+  #p <- qda_ews(timeseries, winsize=50, detrending="gaussian", bandwidth=NULL, cutoff=0.5, logtransform=FALSE, interpolate=FALSE)
+  p <- ggplot(data.frame(list(x = timeseries)), aes(x = x)) + geom_histogram()
 
   #if (input$color != 'None')
   #  p <- p + aes_string(color=input$color)

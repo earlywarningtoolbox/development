@@ -3,7 +3,7 @@ library(ggplot2)
  
 shinyUI(pageWithSidebar(
  
-headerPanel("Diamonds Explorer"),
+headerPanel("Early warnings"),
 sidebarPanel(
  
   #sliderInput('sampleSize', 'Sample Size', min=1, max=nrow(mydata),
