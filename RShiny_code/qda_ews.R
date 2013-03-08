@@ -34,8 +34,7 @@
 # ' qda_ews(foldbif, winsize = 50, detrending="gaussian", bandwidth=NULL, boots = 100, s_level = 0.05, cutoff=0.5, logtransform=FALSE, interpolate=FALSE)
 # ' @keywords early-warning
 
-# Author: Vasilis Dakos, Leo Lahti, March 1, 2013
-
+#'  @author Vasilis Dakos, Leo Lahti, March 1, 2013
 
 qda_ews <- function(timeseries, winsize = 50, detrending=c("no","gaussian","linear","first-diff"), bandwidth=NULL, boots = 100, s_level = 0.05, cutoff=0.05, logtransform=FALSE, interpolate=FALSE){
   

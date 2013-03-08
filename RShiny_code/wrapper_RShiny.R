@@ -23,4 +23,4 @@ timeseries <- foldbif$y
 # logtransform logical. If TRUE data are logtransformed prior to analysis as log(X+1). Default is FALSE.
 # interpolate logical. If TRUE linear interpolation is applied to produce a timeseries of equal length as the original. Default is FALSE (assumes there are no gaps in the timeseries).
 
-q <- qda_ews(timeseries, winsize=50, detrending="gaussian", bandwidth=NULL, incrwinsize=25, incrbandwidth=20, cutoff=0.5, logtransform=FALSE, interpolate=FALSE)
+q <- qda_ews(timeseries, winsize=50, detrending="gaussian", bandwidth=NULL, cutoff=0.5, logtransform=FALSE, interpolate=FALSE)
