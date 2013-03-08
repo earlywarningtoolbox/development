@@ -11,7 +11,7 @@ sidebarPanel(
 
   #selectInput('x', 'X', names(dataset)),
   #selectInput('y', 'Y', names(mydata), names(mydata)[[2]])
-  selectInput('y', 'Title', names(mydata), "y")
+  selectInput('y', 'Title', names(mydata), 'y')
   #selectInput('color', 'Color', c('None', names(dataset))),
 
   #checkboxInput('jitter', 'Jitter'),
