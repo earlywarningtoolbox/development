@@ -5,6 +5,7 @@ shinyUI(pageWithSidebar(
 
   headerPanel("Early warnings"),
     sidebarPanel(
+
       selectInput(inputId = 'analysis', 
     		label = 'Analysis', 
 		choices = c("generic", "potential"), 
