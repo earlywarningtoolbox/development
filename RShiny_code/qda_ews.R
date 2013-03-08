@@ -41,8 +41,10 @@ qda_ews <- function(timeseries, winsize = 50, detrending=c("no","gaussian","line
   timeseries <- data.matrix(timeseries)
   
   if (analysis == "generic") { 
+
     message("Generic Indicators")
-    p <- generic_RShiny(timeseries,winsize,detrending,bandwidth,logtransform,interpolate,AR_n=FALSE,powerspectrum=FALSE)
+    generic_RShiny(timeseries,winsize,detrending,bandwidth,logtransform,interpolate,AR_n=FALSE,powerspectrum=FALSE)
+
   } else if (analysis == "potential") { 
 
     message("Potential Analysis")
@@ -52,9 +54,14 @@ qda_ews <- function(timeseries, winsize = 50, detrending=c("no","gaussian","line
     } else {
       dataset <- timeseries[,1]
     }
+
     p <- movpotential_ews(dataset, param, sdwindow = NULL, bw = -1, minparam = NULL, maxparam = NULL, npoints = 50, thres = 0.002, std = 1, grid.size = 200, cutoff)
     print(p)
   }
+
+}
+
+
 
 #   print("Sensitivity of trends")
 #   s <- sensitivity_RShiny(timeseries,winsizerange=c(25,75),incrwinsize,detrending=detrending, bandwidthrange=c(5,100),incrbandwidth,logtransform=FALSE,interpolate=FALSE)
@@ -62,6 +69,3 @@ qda_ews <- function(timeseries, winsize = 50, detrending=c("no","gaussian","line
 #   print("Significance of trends")
 #   s <- surrogates_RShiny(timeseries,winsize,detrending,bandwidth,boots,s_level,logtransform,interpolate)
   
-  p
-
-}
