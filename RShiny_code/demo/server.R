@@ -8,8 +8,8 @@ dataset <- reactive(function() {
 })
  
 output$plot <- reactivePlot(function() {
-  #p <- ggplot(dataset(), aes_string(x=input$x, y=input$y)) + geom_point()
-  p <- ggplot(dataset(), aes(x = y)) + geom_histogram()
+  p <- ggplot(dataset(), aes_string(x=input$x, y=input$y)) + geom_point()
+  #p <- ggplot(dataset(), aes(x = y)) + geom_histogram()
 
   #if (input$color != 'None')
   #  p <- p + aes_string(color=input$color)
