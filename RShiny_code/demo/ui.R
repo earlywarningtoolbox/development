@@ -14,7 +14,7 @@ shinyUI(pageWithSidebar(
       conditionalPanel(condition = "input.analysis == 'generic'",
 
         sliderInput(inputId = "winsize",
-        	label = "Sliding window size (percentage of the time series):",
+        	label = "Sliding window size (fraction of time series):",
         	min = 5, max = 100, value = 50, step = 0.2),
 
         selectInput(inputId = 'detrending', 
