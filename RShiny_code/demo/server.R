@@ -3,13 +3,9 @@ library(ggplot2)
  
 shinyServer(function(input, output) {
  
-dataset <- reactive(function() {
-  timeseries
-})
- 
-output$plot <- reactivePlot(function() {
+  output$plot <- reactivePlot(function() {
 
-  qda_ews(timeseries, winsize = input$winsize, detrending = input$detrending, logtransform = input$logtransform, interpolate = input$interpolate, analysis = input$analysis)
+    qda_ews(timeseries, param, winsize = input$winsize, detrending = input$detrending, logtransform = input$logtransform, interpolate = input$interpolate, analysis = input$analysis, cutoff = input$cutoff, detection.threshold = input$detection.threshold, grid.size = input$grid.size)
 
-}, height=700)
+  }, height=500)
 })

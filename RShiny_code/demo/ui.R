@@ -23,12 +23,38 @@ shinyUI(pageWithSidebar(
 		selected = "no"),
 
         checkboxInput('logtransform', 'Logarithmize'),
+
         checkboxInput('interpolate', 'Interpolate')
+
+      ),
+
+      # Display this only with analysis = "generic"
+      conditionalPanel(condition = "input.analysis == 'potential'",
+
+        sliderInput(inputId = "detection.threshold",
+        	label = "Threshold for local minima detection",
+        	min = 0, max = 0.5, value = 0.002, step = 0.001),
+
+        sliderInput(inputId = 'grid.size', 
+    		label = 'Grid size', 
+        	min = 10, max = 200, value = 25, step = 5),
+
+        sliderInput(inputId = 'cutoff', 
+    		label = 'Cutoff for visualizing the potential landscape', 
+        	min = 0, max = 1, value = 0.5, step = 0.01)
+
       )
+
     ),
 
     mainPanel(
-      plotOutput(outputId = "plot", height = "300px")
+      plotOutput(outputId = "plot", height = "500px")
     )
   )
 )
+
+
+
+
+
+

@@ -14,7 +14,9 @@
 #'    @param boots the number of surrogate data. Default is 100.
 #'    @param s_level significance level. Default is 0.05.
 #    @param incrbandwidth is the size to increment the bandwidth used for the Gaussian kernel when gaussian filtering is applied. It is expressed as percentage of the timeseries length (must be numeric between 0 and 100). Default is 20.
-#'    @param cutoff the cuttof value to estimate minima and maxima in the potential
+#'    @param cutoff the cutoff value to visualize the potential landscape
+#'    @param detection.threshold detection threshold for potential minima
+#'    @param grid.size grid size (for potential analysis)
 #'    @param logtransform logical. If TRUE data are logtransformed prior to analysis as log(X+1). Default is FALSE.
 #'    @param interpolate logical. If TRUE linear interpolation is applied to produce a timeseries of equal length as the original. Default is FALSE (assumes there are no gaps in the timeseries).
  
@@ -33,10 +35,9 @@
 # ' data(foldbif)
 # ' qda_ews(foldbif, winsize = 50, detrending="gaussian", bandwidth=NULL, boots = 100, s_level = 0.05, cutoff=0.5, logtransform=FALSE, interpolate=FALSE)
 # ' @keywords early-warning
-
 #'  @author Vasilis Dakos, Leo Lahti, March 1, 2013
 
-qda_ews <- function(timeseries, winsize = 50, detrending=c("no","gaussian","linear","first-diff"), bandwidth=NULL, boots = 100, s_level = 0.05, cutoff=0.05, logtransform=FALSE, interpolate=FALSE, analysis = c("generic", "potential")){
+qda_ews <- function(timeseries, param = NULL, winsize = 50, detrending=c("no","gaussian","linear","first-diff"), bandwidth=NULL, boots = 100, s_level = 0.05, cutoff=0.05, detection.threshold = 0.002, grid.size = 50, logtransform=FALSE, interpolate=FALSE, analysis = c("generic", "potential")){
   
   timeseries <- data.matrix(timeseries)
   
@@ -48,14 +49,7 @@ qda_ews <- function(timeseries, winsize = 50, detrending=c("no","gaussian","line
   } else if (analysis == "potential") { 
 
     message("Potential Analysis")
-    param <- seq(from = 1, to = length(timeseries[,1]), by = 1)
-    if (ncol(timeseries)==2){
-      dataset <- timeseries[,2]
-    } else {
-      dataset <- timeseries[,1]
-    }
-
-    p <- movpotential_ews(dataset, param, sdwindow = NULL, bw = -1, minparam = NULL, maxparam = NULL, npoints = 50, thres = 0.002, std = 1, grid.size = 200, cutoff)
+    p <- movpotential_ews(timeseries, param, detection.threshold = detection.threshold, grid.size = grid.size, plot.cutoff = cutoff)
     print(p)
   }
 
