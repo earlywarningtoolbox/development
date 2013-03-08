@@ -3,25 +3,20 @@ library(ggplot2)
  
 shinyUI(pageWithSidebar(
  
-headerPanel("Early warnings"),
-sidebarPanel(
+  headerPanel("Early warnings"),
+    sidebarPanel(
  
-  #sliderInput('sampleSize', 'Sample Size', min=1, max=nrow(mydata),
-  #	       value=min(1000, nrow(mydata)), step=500, round=0)
+    #sliderInput('sampleSize', 'Sample Size', min=1, max=nrow(mydata),
+    #	       value=min(1000, nrow(mydata)), step=500, round=0)
 
-  #selectInput('x', 'X', names(dataset)),
-  #selectInput('y', 'Y', names(mydata), names(mydata)[[2]])
-  selectInput('y', 'Title', names(mydata), 'y')
-  #selectInput('color', 'Color', c('None', names(dataset))),
+    #selectInput('y', 'Title', names(timeseries), 'y')
+    selectInput('analysis', 'Analysis', c("generic", "potential"), "generic")
 
-  #checkboxInput('jitter', 'Jitter'),
-  #checkboxInput('smooth', 'Smooth')
+    #checkboxInput('analysis', 'Analysis'),
 
-  #selectInput('facet_row', 'Facet Row', c(None='.', names(dataset))),
-  #selectInput('facet_col', 'Facet Column', c(None='.', names(dataset)))
-),
+  ),
  
-mainPanel(
-plotOutput('plot')
-)
+  mainPanel(
+    plotOutput('plot')
+  )
 ))

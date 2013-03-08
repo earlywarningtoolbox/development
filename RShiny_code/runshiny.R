@@ -21,6 +21,10 @@ timeseries <- foldbif$y
 # logtransform logical. If TRUE data are logtransformed prior to analysis as log(X+1). Default is FALSE.
 # interpolate logical. If TRUE linear interpolation is applied to produce a timeseries of equal length as the original. Default is FALSE (assumes there are no gaps in the timeseries).
 
-shiny::runGitHub(repo = "development", username = 'earlywarningtoolbox', subdir = "RShiny_code/demo/")
+# Run locally
+shiny::runApp("demo")
+
+# Run from Github
+#shiny::runGitHub(repo = "development", username = 'earlywarningtoolbox', subdir = "RShiny_code/demo/")
 
 #shiny::runGitHub(repo = "development", username = 'earlywarningtoolbox', subdir = "RShiny_code/shiny-helloworld/")

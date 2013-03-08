@@ -120,3 +120,4 @@ generic_RShiny<-function(timeseries,winsize=50,detrending=c("no","gaussian","lin
 	colnames(out)<-c("timeindex","ar1","sd")
 	#return(out)
 	}
+

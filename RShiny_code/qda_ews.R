@@ -36,12 +36,25 @@
 
 #'  @author Vasilis Dakos, Leo Lahti, March 1, 2013
 
-qda_ews <- function(timeseries, winsize = 50, detrending=c("no","gaussian","linear","first-diff"), bandwidth=NULL, boots = 100, s_level = 0.05, cutoff=0.05, logtransform=FALSE, interpolate=FALSE){
+qda_ews <- function(timeseries, winsize = 50, detrending=c("no","gaussian","linear","first-diff"), bandwidth=NULL, boots = 100, s_level = 0.05, cutoff=0.05, logtransform=FALSE, interpolate=FALSE, analysis = c("generic", "potential")){
   
-  timeseries<-data.matrix(timeseries)
+  timeseries <- data.matrix(timeseries)
   
-  print("Generic Indicators")
-  g <- generic_RShiny(timeseries,winsize,detrending,bandwidth,logtransform,interpolate,AR_n=FALSE,powerspectrum=FALSE)
+  if (analysis == "generic") { 
+    message("Generic Indicators")
+    p <- generic_RShiny(timeseries,winsize,detrending,bandwidth,logtransform,interpolate,AR_n=FALSE,powerspectrum=FALSE)
+  } else if (analysis == "potential") { 
+
+    message("Potential Analysis")
+    param <- seq(from = 1, to = length(timeseries[,1]), by = 1)
+    if (ncol(timeseries)==2){
+      dataset <- timeseries[,2]
+    } else {
+      dataset <- timeseries[,1]
+    }
+    p <- movpotential_ews(dataset, param, sdwindow = NULL, bw = -1, minparam = NULL, maxparam = NULL, npoints = 50, thres = 0.002, std = 1, grid.size = 200, cutoff)
+    print(p)
+  }
 
 #   print("Sensitivity of trends")
 #   s <- sensitivity_RShiny(timeseries,winsizerange=c(25,75),incrwinsize,detrending=detrending, bandwidthrange=c(5,100),incrbandwidth,logtransform=FALSE,interpolate=FALSE)
@@ -49,13 +62,6 @@ qda_ews <- function(timeseries, winsize = 50, detrending=c("no","gaussian","line
 #   print("Significance of trends")
 #   s <- surrogates_RShiny(timeseries,winsize,detrending,bandwidth,boots,s_level,logtransform,interpolate)
   
-  print("Potential Analysis")
-  param = seq(from = 1, to = length(timeseries[,1]), by =1)
-  if (dim(timeseries)[2]==2){
-    dataset = timeseries[,2]
-  }else{
-    dataset = timeseries[,1]
-  }
-  m <- movpotential_ews(dataset, param, sdwindow = NULL, bw = -1, minparam = NULL, maxparam = NULL, npoints = 50, thres = 0.002, std = 1, grid.size = 200, cutoff)
-  m
+  p
+
 }
