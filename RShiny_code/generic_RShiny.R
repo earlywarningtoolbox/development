@@ -1,8 +1,7 @@
 # generic_Rshiny for estimating only AR1 and Variance in moving windows with various options for pretreating the data
 # 26 Feb 2013
 
-
-generic_RShiny<-function(timeseries,winsize=50,detrending=c("no","gaussian","linear","first-diff"),bandwidth,logtransform,interpolate,AR_n=FALSE,powerspectrum=FALSE){	
+generic_RShiny<-function(timeseries, winsize = 50, detrending = c("no", "gaussian", "linear", "first-diff"), bandwidth, logtransform, interpolate, AR_n = FALSE, powerspectrum = FALSE){	
 	
 	require(lmtest)
 	require(nortest)

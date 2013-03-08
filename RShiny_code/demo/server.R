@@ -9,9 +9,7 @@ dataset <- reactive(function() {
  
 output$plot <- reactivePlot(function() {
 
-  qda_ews(timeseries, winsize=50, detrending="gaussian", bandwidth=NULL, cutoff=0.5, logtransform=FALSE, interpolate=FALSE, analysis = input$analysis)
-
-  #print(p)
+  qda_ews(timeseries, winsize = input$winsize, detrending = input$detrending, logtransform = input$logtransform, interpolate = input$interpolate, analysis = input$analysis)
 
 }, height=700)
 })
