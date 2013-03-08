@@ -1,3 +1,7 @@
+#install.packages("earlywarnings")
+#library(devtools); install_github(repo = "earlywarnings-R", username = "earlywarningtoolbox", subdir = "earlywarnings", ref = "master")
+library(earlywarnings)
+
 source("qda_ews.R")
 source("generic_RShiny.R")
 source("sensitivity_RShiny.R")
@@ -22,3 +26,4 @@ timeseries <- foldbif$y
 # interpolate logical. If TRUE linear interpolation is applied to produce a timeseries of equal length as the original. Default is FALSE (assumes there are no gaps in the timeseries).
 
 q <- qda_ews(timeseries, winsize=50, detrending="gaussian", bandwidth=NULL, cutoff=0.5, logtransform=FALSE, interpolate=FALSE)
+
