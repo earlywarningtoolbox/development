@@ -4,7 +4,8 @@ library(ggplot2)
 shinyServer(function(input, output) {
  
 dataset <- reactive(function() {
-  mydata[sample(nrow(mydata), input$sampleSize),]
+  #mydata[sample(nrow(mydata), input$sampleSize),]
+  mydata
 })
  
 output$plot <- reactivePlot(function() {
