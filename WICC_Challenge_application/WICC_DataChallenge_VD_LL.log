@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=latex 2013.1.5)  7 MAR 2013 21:23
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=latex 2013.1.5)  8 MAR 2013 09:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -459,8 +459,13 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 37.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 40--45
+Underfull \hbox (badness 10000) in paragraph at lines 40--42
 
+ []
+
+
+Overfull \hbox (4.35434pt too wide) in paragraph at lines 49--51
+\T1/cmr/bx/n/12 [HERE IT MIGHT BE SUF-FI-CIENT TO HAVE THE BE-LOW BALL-VALLEY
  []
 
 [1
@@ -471,18 +476,23 @@ File: figure1.eps Graphic file (type eps)
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+
+Overfull \hbox (3.01884pt too wide) in paragraph at lines 61--63
+\T1/cmr/bx/n/12 GENERAL com-ment: PER-HAPS THE DE-SCRIP-TIONS COULD BE SHORT-
+ []
+
 [2]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 66.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 68.
  (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 66.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 68.
  [3]
 File: fig_2_simulated_970pts.eps Graphic file (type eps)
 
 <fig_2_simulated_970pts.eps>
-Underfull \hbox (badness 10000) in paragraph at lines 119--120
+Underfull \hbox (badness 10000) in paragraph at lines 121--122
 
  []
 
@@ -492,33 +502,33 @@ File: fig_3_climatedata.eps Graphic file (type eps)
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 142.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 146.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-Overfull \hbox (35.69398pt too wide) in paragraph at lines 142--142
+Overfull \hbox (35.69398pt too wide) in paragraph at lines 146--146
 [][][][][][][][][]| 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 151.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 155.
 [5] [6] [7]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 151.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 155.
  (./WICC_DataChallenge_VD_LL.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 151.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 151.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 155.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 155.
 Package rerunfilecheck Info: File `WICC_DataChallenge_VD_LL.out' has not change
 d.
 (rerunfilecheck)             Checksum: 5812E5E42CDED506849BF738AEA39446;664.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 151.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 155.
  ) 
 Here is how much of TeX's memory you used:
  7108 strings out of 495060
  101378 string characters out of 3182054
- 186023 words of memory out of 3000000
+ 187002 words of memory out of 3000000
  10163 multiletter control sequences out of 15000+200000
  21026 words of font info for 60 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 42i,8n,32p,1753b,400s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,8n,32p,1764b,400s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on WICC_DataChallenge_VD_LL.dvi (7 pages, 30968 bytes).
+Output written on WICC_DataChallenge_VD_LL.dvi (7 pages, 30916 bytes).
