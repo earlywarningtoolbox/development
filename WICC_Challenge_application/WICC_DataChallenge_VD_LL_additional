@@ -1,0 +1,52 @@
+\documentclass[12pt,a4paper,final]{article}
+\usepackage[latin1]{inputenc}
+\usepackage[numbers]{natbib}  % default authoryear
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{setspace}
+\usepackage[pagewise]{lineno}
+\usepackage{graphicx,epstopdf}
+\usepackage{subfigure}
+\usepackage[verbose,a4paper,tmargin=2.4cm,bmargin=2.4cm,lmargin=2.4cm,rmargin=2.4cm]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{url}
+\usepackage[multiple]{footmisc}
+\usepackage{setspace}
+
+
+% Use the PLoS provided bibtex style
+%\bibliographystyle{plos2009}
+
+\usepackage{color,ulem} % package for text color comments
+
+\author{Vasilis Dakos and Leo Lahti}
+
+\title{
+\begin{figure}[h]
+%\begin{left}
+\includegraphics[scale=0.55]{logoEWS.eps}
+%\end{left}
+\end{figure}
+Early Warning Signals Toolbox:\\ 
+A novel approach for Detecting Critical Transitions
+}
+
+\begin{document}
+\maketitle
+
+\begin{doublespacing}
+
+\section{References} %Overview
+
+M. Scheffer, S. Carpenter, J. A. Foley, C. Folke, and B. Walker. Catastrophic shifts in ecosystems. Nature, 413:591Ð596, 2001.
+M. Scheffer, S. R. Carpenter, T. M. Lenton, J. Bascompte, W. Brock, V. Dakos, J. van de Koppel, I. A. van de Leemput, S. A. Levin, E. H. van Nes, M. Pascual, and J. Vandermeer. Anticipating Critical Transitions. Science, 338(6105):344Ð348, October 2012.[3] R. M. May, S. A. Levin, and G. Sugihara. Complex systems: ecology for bankers. Nature, 451(7181):893Ð5, March 2008.
+\\[4] J. G. Venegas, T. Winkler, G. Musch, M. F. V. Melo, D. Layfield, N. Tgavalekos, A. J. Fischman, R. J. Callahan, G. Bellani, and R. S. Harris. Self-organized patchiness in asthma as a prelude to catastrophic shifts. Nature, 434(7034):777Ð782, 2005.\\[5] P. E. McSharry, L. A. Smith, L. Tarassenko, J. Martinerie, M. Le Van Quyen, M. Baulac, and B. Renault. Prediction of epileptic seizures: Are nonlinear methods relevant? [1] (multiple letters). Nature Medicine, 9(3):241Ð242, 2003.[6] M. A. Kramer, W. Truccolo, U. T. Eden, K. Q. Lepage, L. R. Hochberg, and E. N. Es- kandar. Human seizures self-terminate across spatial scales via a critical transition. PNAS, 109(51):21116Ð21121, 2012.[7] S. Rahmstorf. Ocean circulation and climate during the past 120,000 years. Nature, 419(6903):207Ð214, September 2002.[8] T. M. Lenton. Early warning of climate tipping points. Nature Clim. Change, 1(4):201Ð209,2011.[9] M. Scheffer, J. Bascompte, W. A. Brock, V. Brovkin, S. R. Carpenter, V. Dakos, H. Held, E. H. van Nes, M. Rietkerk, and G. Sugihara. Early-warning signals for critical transitions. Nature, 461(7260):53Ð59, 2009.[10] V. Dakos, M. Scheffer, E. H. van Nes, V. Brovkin, V. Petoukhov, and H. Held. Slowing down as an early warning signal for abrupt climate change. Proceedings of the National Academyof Sciences of the United States of America, 105(38):14308Ð12, September 2008.[11] J. M. Drake and B. D. Griffen. Early warning signals of extinction in deteriorating environ- ments. Nature, 467(7314):456Ð459, September 2010.[12] S. R. Carpenter, J. J. Cole, M. L. Pace, R. Batt, W. A. Brock, T. Cline, J. Coloso, J. R. Hodgson, J. F. Kitchell, D. A. Seekell, and B. Smith, L .and Weidel. Early warnings of regime shifts: a whole-ecosystem experiment. Science, 332(6033):1079Ð82, May 2011.[13] L. Dai, D. Vorselen, K. S. Korolev, and J. Gore. Generic Indicators for Loss of Resilience Before a Tipping Point Leading to Population Collapse. Science, 336(6085):1175Ð1177, May 2012.
+??????????????????????[14] A. J. Veraart, E. J. Faassen, V. Dakos, E. H. van Nes, M. L\"{u}rling, and M. Scheffer. Recovery rates reflect distance to a tipping point in a living system. Nature, 481(7381):357Ð9, January 2012.[15] R. Wang, J. A. Dearing, P. G. Langdon, E. Zhang, X. Yang, V. Dakos, and M. Scheffer. Flickering gives early warning signals of a critical transition to a eutrophic lake state. Nature, 492(7429):419Ð422, November 2012.[16] C. Wissel. A universal law of the characteristic return time near thresholds. Oecologia, 65(1):101Ð107, 1984.[17] S. H. Strogatz. Nonlinear Dynamics and Chaos with Applications to Physics, Biology,Chemistry and Engineering. Perseus Books, Reading, 1 edition, 1994.[18] C. Kuehn. A mathematical framework for critical transitions: Bifurcations, fast-slow systems and stochastic dynamics. Physica D: Nonlinear Phenomena, 240(12):1020Ð1035, March 2011.[19] Egbert H van Nes and Marten Scheffer. Slow Recovery from Perturbations as a Generic Indicator of a Nearby Catastrophic Shift. The American naturalist, 169(6):738Ð747, 2007.[20] A. R Ives. Measuring resilience in stochastic systems. Ecological Monographs, 65(2):217Ð233,1995.[21] H.HeldandT.Kleinen.Detectionofclimatesystembifurcationsbydegeneratefingerprinting. Geophysical Research Letters, 31(L23207):1Ð4, 2004.[22] S. R. Carpenter and W. A. Brock. Rising variance: a leading indicator of ecological transition. Ecology letters, 9(3):311Ð8, March 2006.[23] V. Guttal and C. Jayaprakash. Changing skewness: an early warning signal of regime shifts in ecosystems. Ecology Letters, 11(5):450Ð460, 2008.[24] V. Dakos, S. R. Carpenter, W. A. Brock, A. M. Ellison, V. Guttal, A. R. Ives, S. K\'{e}fi, V. Livina, D. A. Seekell, E. H. van Nes, and M. Scheffer. Methods for detecting early warnings of critical transitions in time series illustrated using simulated ecological data. PLoS ONE,7(7):e41010, 2012.
+
+\end{doublespacing}
+
+
+\end{document}
+
