@@ -5,7 +5,7 @@ library(earlywarnings)
 
 source("qda_ews.R")
 source("generic_RShiny.R")
-source("sensitivity_RShiny.R")
+source("surrogates_RShiny.R")
 source("potential_RShiny.R")
 
 # Simulated data
