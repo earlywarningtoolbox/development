@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2012)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: WICC_DataChallenge_VD_LL.aux
+The style file: unsrt.bst
+Database file #1: WICC_bibl.bib
+You've used 23 entries,
+            1791 wiz_defined-function locations,
+            628 strings with 8218 characters,
+and the built_in function-call counts, 6272 in all, are:
+= -- 529
+> -- 380
+< -- 0
++ -- 136
+- -- 113
+* -- 585
+:= -- 1047
+add.period$ -- 69
+call.type$ -- 23
+change.case$ -- 23
+chr.to.int$ -- 0
+cite$ -- 23
+duplicate$ -- 208
+empty$ -- 541
+format.name$ -- 113
+if$ -- 1296
+int.to.chr$ -- 0
+int.to.str$ -- 23
+missing$ -- 24
+newline$ -- 118
+num.names$ -- 23
+pop$ -- 27
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 72
+stack$ -- 0
+substring$ -- 528
+swap$ -- 23
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 66
+width$ -- 25
+write$ -- 256
