@@ -2,7 +2,7 @@
 #library(devtools); install_github(repo = "earlywarnings-R", username = "earlywarningtoolbox", subdir = "earlywarnings", ref = "master")
 library(earlywarnings)
 
-source("qda_ews.R")
+source("qda_RShiny.R")
 source("generic_RShiny.R")
 source("potential_RShiny.R")
 source("surrogates_RShiny.R")
@@ -29,4 +29,4 @@ timeseries <- YD2PB_grayscale$x
 # logtransform logical. If TRUE data are logtransformed prior to analysis as log(X+1). Default is FALSE.
 # interpolate logical. If TRUE linear interpolation is applied to produce a timeseries of equal length as the original. Default is FALSE (assumes there are no gaps in the timeseries).
 
-qda_ews(timeseries, param = NULL, winsize = 50, detrending= "gaussian", bandwidth=NULL, boots = 100, s_level = 0.05, cutoff=0.05, detection.threshold = 0.002, grid.size = 50, logtransform=FALSE, interpolate=FALSE, analysis = "Trend significance analysis")
+qda_RShiny(timeseries, param = NULL, winsize = 50, detrending= "gaussian", bandwidth=NULL, boots = 100, s_level = 0.05, cutoff=0.05, detection.threshold = 0.002, grid.size = 50, logtransform=FALSE, interpolate=FALSE, analysis = "Trend significance analysis")

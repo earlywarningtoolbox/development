@@ -31,7 +31,7 @@ PlotPotential <- function (res, title = "", xlab.text, ylab.text, cutoff = 0.5) 
 
   # Static contour
   # Interpolate potential grid
-  intp <- akima::interp(as.vector(res$pars), as.vector(res$xis), as.vector(pots))
+  intp <- tgp::interp.loess(as.vector(res$pars), as.vector(res$xis), as.vector(pots))
   xy <- expand.grid(intp$x, intp$y)
   z <- as.vector(intp$z)
   z[is.na(z)] <- max(na.omit(z))
@@ -50,45 +50,45 @@ PlotPotential <- function (res, title = "", xlab.text, ylab.text, cutoff = 0.5) 
 }
 
 
-
-#' Description: Potential Analysis
-#'
-#' \code{livpotential_ews} performs one-dimensional potential estimation derived from a uni-variate timeseries
-#'
-# Details:
-#' see ref below
-#' 
-#  Arguments:
-#'    @param x data vector
-#'    @param std Standard deviation of the noise (defaults to 1; this will set scaled potentials)
-#'    @param bw bandwidth for kernel estimation
-#'    @param xi x values at which the potential is estimated
-#'    @param weights optional weights in ksdensity (used by movpotentials).
-#'    @param grid.size grid size
-#'
-# Returns:
-#'   @return \code{livpotential} returns a list with the following elements:
-#'   @return \item{xi}{the grid of points on which the potential is estimated}
-#'   @return \item{pot}{the actual value of the potential}
-#'   @return \item{minima}{the grid points at which the potential has minimum values}
-#'   @return \item{maxima}{the grid points at which the potential has maximum values}
-#'   @return \item{bw}{bandwidth of kernel used}
-#'
-#' @export
-#'
-#' @references Livina, VN, F Kwasniok, and TM Lenton, 2010. Potential analysis reveals changing number of climate states during the last 60 kyr . \emph{Climate of the Past}, 6, 77-82.
-#' 
-#' Dakos, V., et al (2012)."Methods for Detecting Early Warnings of Critical Transitions in Time Series Illustrated Using Simulated Ecological Data." \emph{PLoS ONE} 7(7): e41010. doi:10.1371/journal.pone.0041010
-#' @author Based on Matlab code from Egbert van Nes modified by Leo Lahti. Implemented in early warnings package by V. Dakos.
-#' @seealso 
-#' \code{\link{generic_ews}}; \code{\link{ddjnonparam_ews}}; \code{\link{bdstest_ews}}; \code{\link{sensitivity_ews}};\code{\link{surrogates_ews}}; \code{\link{ch_ews}};\code{\link{movpotential_ews}}
-# ; \code{\link{timeVAR_ews}}; \code{\link{thresholdAR_ews}}
-#' @examples 
-#' data(foldbif)
-#' res <- livpotential_ews(foldbif)
-#' plot(res$xi, res$pot) 
-#' @keywords early-warning
-
+# 
+# #' Description: Potential Analysis
+# #'
+# #' \code{livpotential_ews} performs one-dimensional potential estimation derived from a uni-variate timeseries
+# #'
+# # Details:
+# #' see ref below
+# #' 
+# #  Arguments:
+# #'    @param x data vector
+# #'    @param std Standard deviation of the noise (defaults to 1; this will set scaled potentials)
+# #'    @param bw bandwidth for kernel estimation
+# #'    @param xi x values at which the potential is estimated
+# #'    @param weights optional weights in ksdensity (used by movpotentials).
+# #'    @param grid.size grid size
+# #'
+# # Returns:
+# #'   @return \code{livpotential} returns a list with the following elements:
+# #'   @return \item{xi}{the grid of points on which the potential is estimated}
+# #'   @return \item{pot}{the actual value of the potential}
+# #'   @return \item{minima}{the grid points at which the potential has minimum values}
+# #'   @return \item{maxima}{the grid points at which the potential has maximum values}
+# #'   @return \item{bw}{bandwidth of kernel used}
+# #'
+# #' @export
+# #'
+# #' @references Livina, VN, F Kwasniok, and TM Lenton, 2010. Potential analysis reveals changing number of climate states during the last 60 kyr . \emph{Climate of the Past}, 6, 77-82.
+# #' 
+# #' Dakos, V., et al (2012)."Methods for Detecting Early Warnings of Critical Transitions in Time Series Illustrated Using Simulated Ecological Data." \emph{PLoS ONE} 7(7): e41010. doi:10.1371/journal.pone.0041010
+# #' @author Based on Matlab code from Egbert van Nes modified by Leo Lahti. Implemented in early warnings package by V. Dakos.
+# #' @seealso 
+# #' \code{\link{generic_ews}}; \code{\link{ddjnonparam_ews}}; \code{\link{bdstest_ews}}; \code{\link{sensitivity_ews}};\code{\link{surrogates_ews}}; \code{\link{ch_ews}};\code{\link{movpotential_ews}}
+# # ; \code{\link{timeVAR_ews}}; \code{\link{thresholdAR_ews}}
+# #' @examples 
+# #' data(foldbif)
+# #' res <- livpotential_ews(foldbif)
+# #' plot(res$xi, res$pot) 
+# #' @keywords early-warning
+# 
 livpotential_ews <- function (x, std = 1, bw = -1, xi = NULL, weights = c(), grid.size = 200) {
 
   x <- data.frame(x)
@@ -163,7 +163,7 @@ livpotential_ews <- function (x, std = 1, bw = -1, xi = NULL, weights = c(), gri
 #'  res <- movpotential_ews(X, param)
 #' @keywords early-warning
 
-movpotential_ews <- function (X, param = NULL, bw = -1, detection.threshold = 0.002, std = 1, grid.size = 50, plot.cutoff = 0.5) {
+movpotential_RShiny <- function (X, param = NULL, bw = -1, detection.threshold = 0.002, std = 1, grid.size = 50, plot.cutoff = 0.5) {
 
   if (is.null(param)) {
     param <- seq(1, nrow(X), 1)

@@ -139,24 +139,4 @@ abline(v=q_var[s_level*boots],col="red",lwd=2)
 abline(v=q_var[(1-s_level)*boots],col="red",lwd=2)
 points(Ktauestind_varorig,0,pch=21, bg="black", col = "black", cex=4)
 title("Variance" ,cex.main=1.3)
-
-# # Plot
-# layout(matrix(1:4,2,2))
-# par(font.main=10,mar=(c(4.6,3.5,0.5,2)+0.2),mgp=c(2,1,0),oma=c(0.5,0.5,2,0),cex.axis=0.8,cex.lab=0.8,cex.main=0.8)
-# 
-# fields::image.plot(width,tw,Ktauestind_ar1,zlim=c(-1,1),xlab="filtering bandwidth",ylab="rolling window size",main="trend estimate",log="y",nlevel=20,col=rainbow(20))
-# ind=which(Ktauestind_ar1==max(Ktauestind_ar1),arr.ind=TRUE)
-# lines(width[ind[1]],tw[ind[2]],type="p",cex=1.2,pch=17,col="black")
-# hist(Ktauestind_ar1,breaks=12,col="green",main=NULL, xlab="trend estimate", ylab="occurence",border="black",xlim=c(-1,1))
-# fields::image.plot(width,tw,Ktauestind_var,zlim=c(-1,1),xlab="filtering bandwidth",ylab="rolling window size",main="trend estimate",log="y",nlevel=20,col=rainbow(20))
-# lines(width[ind[1]],tw[ind[2]],type="p",cex=1.2,pch=17,col="black")
-# ind=which(Ktauestind_var==max(Ktauestind_var),arr.ind=TRUE)
-# hist(Ktauestind_var,breaks=12,col="blue",main=NULL, xlab="trend estimate", ylab="occurence", border="black",xlim=c(-1,1))
-# mtext("Autocorrelation",side=3,line=0.2, outer=TRUE)
-# mtext("Variance",line=-12, at=0.5, outer=TRUE)
-
-	# Output
-# 	out<-data.frame(Ktauestindorig,Ktaupindorig,Ktauestind,Ktaupind,p)
-# 	colnames(out)<-c("Kendall tau estimate original","Kendall tau p-value original","Kendall tau estimate surrogates","Kendall tau p-value surrogates","significance p")
-# 	return(out)
 }

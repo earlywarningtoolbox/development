@@ -23,6 +23,6 @@ print("Trend significance analysis")
 s <- surrogates_RShiny(timeseries,winsize=50,detrending=c("no","gaussian","linear","first-diff"),bandwidth=NULL,boots=100,s_level=0.05,logtransform=FALSE,interpolate=FALSE)
 
 print("Potential analysis")
-p <- movpotential_ews(timeseries, param = NULL, bw = -1, detection.threshold = 0.002, std = 1, grid.size = 50, plot.cutoff = 0.5)
+p <- movpotential_RShiny(timeseries, param = NULL, bw = -1, detection.threshold = 0.002, std = 1, grid.size = 50, plot.cutoff = 0.5)
 p$plot
 
