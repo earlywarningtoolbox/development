@@ -1,6 +1,6 @@
 #' Description: Quick Detection Analysis for Generic Early Warning Signals
 #'
-#' \code{qda_ews} is used to estimate autocorrelation, variance within rolling windows along a timeseries, test the sensitivity in their trends, and reconstruct the potential landscape of the timeseries
+#' \code{qda_ews} is used to estimate autocorrelation, variance within rolling windows along a timeseries, test the significance of their trends, and reconstruct the potential landscape of the timeseries
 #'
 # Details:
 #' see ref below
@@ -11,7 +11,7 @@
 #'    @param detrending the timeseries can be detrended/filtered prior to analysis. There are four options: \code{gaussian} filtering, \code{linear} detrending and \code{first-differencing}. Default is \code{no} detrending.
 #'    @param bandwidth is the bandwidth used for the Gaussian kernel when gaussian filtering is applied. It is expressed as percentage of the timeseries length (must be numeric between 0 and 100). Alternatively it can be given by the bandwidth selector \code{\link{bw.nrd0}} (Default).
 #    @param incrwinsize increments the rolling window size (must be numeric between 0 and 100). Default is 25.
-#'    @param boots the number of surrogate data. Default is 100.
+#'    @param boots the number of surrogate data to generate from fitting an ARMA(p,q) model. Default is 100.
 #'    @param s_level significance level. Default is 0.05.
 #    @param incrbandwidth is the size to increment the bandwidth used for the Gaussian kernel when gaussian filtering is applied. It is expressed as percentage of the timeseries length (must be numeric between 0 and 100). Default is 20.
 #'    @param cutoff the cutoff value to visualize the potential landscape
@@ -22,7 +22,7 @@
  
 #' 
 # Returns:
-#' \code{qda_ews} returns three plots. The first plot contains the original data, the detrending/filtering applied and the residuals (if selected), autocorrelation and variance. For each statistic trends are estimated by the nonparametric Kendall tau correlation.  The second plot, returns a plot with the Kendall tau estimates for a range of rolling window sizes used, together with a histogram of the distributions of the statistic for autocorrelation and variance. When \code{gaussian filtering} is chosen, a contour plot is produced for the Kendall tau estimates for the range of both rolling window sizes and bandwidth used. A reverse triangle indicates the combination of the two parameters for which the Kendall tau was the highest The third plot is reconstructed potential landscape in 2D.
+#' \code{qda_ews} returns three plots depending on the analysis chosen. The first plot contains the original data, the detrending/filtering applied and the residuals (if selected), autocorrelation and variance. For each statistic trends are estimated by the nonparametric Kendall tau correlation.  The second plot, returns a histogram of the distributions of the Kendall trend statistic for autocorrelation and variance estimated on the surrogated data. Vertical lines represent the level of significance, whereas the black dots the actual trend found in the time series. The third plot is the reconstructed potential landscape in 2D.
 #'  
 #' @export
 #' 
@@ -33,24 +33,31 @@
 # '
 # ' @examples 
 # ' data(foldbif)
-# ' qda_ews(foldbif, winsize = 50, detrending="gaussian", bandwidth=NULL, boots = 100, s_level = 0.05, cutoff=0.5, logtransform=FALSE, interpolate=FALSE)
+# ' qda_ews <- function(timeseries, param = NULL, winsize = 50, detrending=c("no","gaussian","linear","first-diff"), bandwidth=NULL, boots = 100, s_level = 0.05, cutoff=0.05, detection.threshold = 0.002, grid.size = 50, logtransform=FALSE, interpolate=FALSE, analysis = c("Indicator trend analysis"))
 # ' @keywords early-warning
 #'  @author Vasilis Dakos, Leo Lahti, March 1, 2013
 
-qda_ews <- function(timeseries, param = NULL, winsize = 50, detrending=c("no","gaussian","linear","first-diff"), bandwidth=NULL, boots = 100, s_level = 0.05, cutoff=0.05, detection.threshold = 0.002, grid.size = 50, logtransform=FALSE, interpolate=FALSE, analysis = c("generic", "potential")){
+qda_ews <- function(timeseries, param = NULL, winsize = 50, detrending=c("no","gaussian","linear","first-diff"), bandwidth=NULL, boots = 100, s_level = 0.05, cutoff=0.05, detection.threshold = 0.002, grid.size = 50, logtransform=FALSE, interpolate=FALSE, analysis = c("Indicator trend analysis", "Trend significance analysis","Potential analysis")){
   
   timeseries <- data.matrix(timeseries)
   
-  if (analysis == "generic") { 
+  if (analysis == "Indicator trend analysis") { 
 
-    message("Generic Indicators")
+    message("Indicator trend analysis")
     generic_RShiny(timeseries,winsize,detrending,bandwidth,logtransform,interpolate,AR_n=FALSE,powerspectrum=FALSE)
+      
+  } else if (analysis == "Trend significance analysis") {
+      
+    message("Trend significance analysis")
+    s <- surrogates_RShiny(timeseries,winsize,detrending,bandwidth,boots,s_level,logtransform,interpolate)
+    print(s)
 
-  } else if (analysis == "potential") { 
+  } else if (analysis == "Potential analysis") { 
 
-    message("Potential Analysis")
+    message("Potential analysis")
     p <- movpotential_ews(timeseries, param, detection.threshold = detection.threshold, grid.size = grid.size, plot.cutoff = cutoff)
     print(p)
+      
   }
 
 }

@@ -9,10 +9,10 @@ source("surrogates_RShiny.R")
 source("potential_RShiny.R")
 
 # Simulated data
-# mydata <- read.csv("simulateddata.csv")
+# mydata <- read.csv("fold_simulated_data.csv")
 
 # Real data
-mydata <- read.csv("climatedata.csv")
+# mydata <- read.csv("climate_data.csv")
 
 # Run locally
 shiny::runApp("demo")
