@@ -1,20 +1,20 @@
 library(shiny)
+
+if (try(library(ggplot2)) == "try-error") {install.packages("ggplot2")}
 library(ggplot2)
+
+if (try(library(devtools)) == "try-error") {install.packages("devtools")}
+library(devtools)
+
+install_github(repo = "earlywarnings-R", username = "earlywarningtoolbox", subdir = "earlywarnings", ref = "master")
+library(earlywarnings)
+
 
 # Simulated data
 simulateddata <- read.csv("fold_simulated_data.csv")
 
 # Real data
 climatedata <- read.csv("climate_data.csv")
-
-# data(YD2PB_grayscale)
-# data(foldbif)
-# 
-# # Real climate data
-# climatedata <- data.matrix(YD2PB_grayscale$x)
-# 
-# # Simulated data
-# simulateddata <- data.matrix(foldbif$x)
 
  
 shinyServer(function(input, output) {
