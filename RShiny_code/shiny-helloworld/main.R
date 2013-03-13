@@ -1,9 +1,8 @@
 library(shiny)
 
 shiny::runGitHub(repo = "development", 
-		  username = 'earlywarnings',
-         	       ref = "master", 
-	 	    subdir = "RShiny_code/shiny-helloworld")
+		  username = 'earlywarningtoolbox',
+	 	    subdir = "RShiny_code/shiny-helloworld/")
 
 
 # from gist

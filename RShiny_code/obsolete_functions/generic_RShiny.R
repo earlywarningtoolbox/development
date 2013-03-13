@@ -1,8 +1,7 @@
 # generic_Rshiny for estimating only AR1 and Variance in moving windows with various options for pretreating the data
 # 26 Feb 2013
 
-
-generic_RShiny<-function(timeseries,winsize=50,detrending=c("no","gaussian","linear","first-diff"),bandwidth,logtransform,interpolate,AR_n=FALSE,powerspectrum=FALSE){	
+generic_RShiny<-function(timeseries, winsize = 50, detrending = c("no", "gaussian", "linear", "first-diff"), bandwidth, logtransform, interpolate, AR_n = FALSE, powerspectrum = FALSE){	
 	
 	require(lmtest)
 	require(nortest)
@@ -12,9 +11,9 @@ generic_RShiny<-function(timeseries,winsize=50,detrending=c("no","gaussian","lin
 	require(KernSmooth)
 	require(moments)
 
-	#timeseries<-ts(timeseries)
-	timeseries<-data.matrix(timeseries) #strict data-types the input data as tseries object for use in later steps
-	if (dim(timeseries)[2]==1){
+  #timeseries<-ts(timeseries)
+  timeseries<-data.matrix(timeseries) #strict data-types the input data as tseries object for use in later steps
+  if (ncol(timeseries) == 1){
 		Y=timeseries
 		timeindex=1:dim(timeseries)[1]
 		}else if(dim(timeseries)[2]==2){
@@ -89,7 +88,7 @@ generic_RShiny<-function(timeseries,winsize=50,detrending=c("no","gaussian","lin
 
 	# Plotting
 	# Generic Early-Warnings
-	dev.new()
+	#dev.new()
 	par(mar=(c(1,2,0.5,2)+0),oma=c(2,2,2,2),mfrow=c(4,1))  
 	plot(timeindex,Y,type="l",ylab="",xlab="",xaxt="n",lwd=2,las=1,xlim=c(timeindex[1],timeindex[length(timeindex)]))
 	legend("bottomleft","data",,bty = "n")
@@ -115,8 +114,10 @@ generic_RShiny<-function(timeseries,winsize=50,detrending=c("no","gaussian","lin
 	mtext("time",side=1,line=2,cex=0.8)
 	mtext("Generic Early-Warnings: Autocorrelation - Variance",side=3,line=0.2, outer=TRUE)#outer=TRUE print on the outer margin
 	
-	# Output
-	out<-data.frame(timeindex[mw:length(nsmY)],nARR,nSD)
-	colnames(out)<-c("timeindex","ar1","sd")
-	#return(out)
-	}
+  # Output
+  out<-data.frame(timeindex[mw:length(nsmY)],nARR,nSD)
+  colnames(out)<-c("timeindex","ar1","sd")
+  #return(out)
+
+}
+
