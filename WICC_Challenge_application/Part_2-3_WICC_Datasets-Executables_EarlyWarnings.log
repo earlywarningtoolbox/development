@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2013.2.22)  14 MAR 2013 01:09
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2013.2.22)  15 MAR 2013 00:02
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -515,7 +515,7 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 39.
 (/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 47.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 42.
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
@@ -533,7 +533,7 @@ Package epstopdf Info: Source file: <figure_data.eps>
 o.pdf figure_data.eps>
 (epstopdf)             \includegraphics on input line 53.
 Package epstopdf Info: Output file is already uptodate.
- <figure_data-eps-converted-to.pdf, id=30, 575.14874pt x 196.735pt>
+ <figure_data-eps-converted-to.pdf, id=33, 575.14874pt x 196.735pt>
 File: figure_data-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figure_data-eps-converted-to.pdf>
@@ -541,81 +541,72 @@ Package pdftex.def Info: figure_data-eps-converted-to.pdf used on input line 53
 .
 (pdftex.def)             Requested size: 431.3605pt x 147.55087pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--70
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 64--70
-
+Overfull \hbox (25.59619pt too wide) in paragraph at lines 64--72
+\T1/cmr/m/it/12 install.packages(c("shiny","devtools")); li-brary(devtools); in
+-stall_github(repo = "earlywarnings-
  []
 
 [2 <./figure_data-eps-converted-to.pdf>]
-<R_install_ews.png, id=50, 707.64375pt x 504.88625pt>
-File: R_install_ews.png Graphic file (type png)
- <use R_install_ews.png>
-Package pdftex.def Info: R_install_ews.png used on input line 73.
-(pdftex.def)             Requested size: 353.82101pt x 252.44249pt.
+<R_install_ews2.png, id=51, 658.46pt x 508.90125pt>
+File: R_install_ews2.png Graphic file (type png)
+ <use R_install_ews2.png>
+Package pdftex.def Info: R_install_ews2.png used on input line 75.
+(pdftex.def)             Requested size: 362.15413pt x 279.89655pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 80--84
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 80--84
-
- []
-
-[3 <./R_install_ews.png>] <demo_start.png, id=56, 1135.24126pt x 709.65125pt>
+<demo_start.png, id=52, 1135.24126pt x 709.65125pt>
 File: demo_start.png Graphic file (type png)
-
-<use demo_start.png>
-Package pdftex.def Info: demo_start.png used on input line 89.
+ <use demo_start.png>
+Package pdftex.def Info: demo_start.png used on input line 91.
 (pdftex.def)             Requested size: 454.08846pt x 283.85547pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 95--99
+Underfull \hbox (badness 10000) in paragraph at lines 97--98
 
  []
 
-[4 <./demo_start.png>]
-<demo_significance2.png, id=66, 1166.3575pt x 699.61375pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--101
+
+ []
+
+[3 <./R_install_ews2.png>] [4 <./demo_start.png>]
+<demo_significance2.png, id=67, 1166.3575pt x 699.61375pt>
 File: demo_significance2.png Graphic file (type png)
 
 <use demo_significance2.png>
-Package pdftex.def Info: demo_significance2.png used on input line 119.
+Package pdftex.def Info: demo_significance2.png used on input line 123.
 (pdftex.def)             Requested size: 466.53474pt x 279.84055pt.
 
-Overfull \hbox (5.59975pt too wide) in paragraph at lines 119--120
+Overfull \hbox (5.59975pt too wide) in paragraph at lines 123--124
  [] 
  []
 
 [5 <./demo_significance2.png>]
-<demo_potential.png, id=78, 1137.24875pt x 595.22375pt>
+<demo_potential.png, id=79, 1137.24875pt x 595.22375pt>
 File: demo_potential.png Graphic file (type png)
 
 <use demo_potential.png>
-Package pdftex.def Info: demo_potential.png used on input line 134.
+Package pdftex.def Info: demo_potential.png used on input line 138.
 (pdftex.def)             Requested size: 454.89145pt x 238.08528pt.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 143.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 147.
  [6 <./demo_potential.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 143.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 147.
 
 (./Part_2-3_WICC_Datasets-Executables_EarlyWarnings.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 143.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 143.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 147.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 147.
 Package rerunfilecheck Info: File `Part_2-3_WICC_Datasets-Executables_EarlyWarn
 ings.out' has not changed.
 (rerunfilecheck)             Checksum: 774D615E800A0588D2100CA18EC1ABCC;179.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 143.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 147.
  ) 
 Here is how much of TeX's memory you used:
  7543 strings out of 493488
- 108386 string characters out of 3141326
+ 108391 string characters out of 3141326
  193531 words of memory out of 3000000
  10687 multiletter control sequences out of 15000+200000
  19089 words of font info for 58 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 42i,8n,28p,785b,399s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,8n,28p,785b,403s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/local/texlive/2012/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 </usr/local/texlive/2012/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></
 usr/local/texlive/2012/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></us
@@ -627,10 +618,10 @@ texlive/2012/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/te
 xlive/2012/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb></usr/local/texl
 ive/2012/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
 Output written on Part_2-3_WICC_Datasets-Executables_EarlyWarnings.pdf (6 pages
-, 819699 bytes).
+, 833522 bytes).
 PDF statistics:
- 125 PDF objects out of 1000 (max. 8388607)
- 98 compressed objects within 1 object stream
+ 126 PDF objects out of 1000 (max. 8388607)
+ 99 compressed objects within 1 object stream
  28 named destinations out of 1000 (max. 500000)
  55 words of extra memory for PDF output out of 10000 (max. 10000000)
 
