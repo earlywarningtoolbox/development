@@ -64,7 +64,7 @@ In order to execute the analyses proposed from our toolbox, two things are neces
 R can be installed as it is freely available at \url{www.r-project.org/}. Instructions of how to install it on any operating system is fully documented. If you have R already installed, you need to make sure you are using a version (R>= 2.14.0). If needed, you can run an update of R.
 Once you have installed R, start the program and, as shown in Fig. 2, copy-pasteon the command line:\\
 \\
-\textit{library(devtools); install\_github(repo = "earlywarnings-R", username = "earlywarningtoolbox", subdir = "earlywarnings")}\\
+\textit{install.packages("devtools"); library(devtools); install\_github(repo = "earlywarnings-R", username = "earlywarningtoolbox", subdir = "earlywarnings")}\\
 \\
 Congratulations! You have just installed the Early Warning Signals Toolbox on your computer!
 
@@ -79,58 +79,61 @@ Congratulations! You have just installed the Early Warning Signals Toolbox on yo
 \section{Instructions: Using the toolbox}
 What you want now to do is to get the user interface working to run the demo of the analysis presented in Part 1 of the submission. For this you need to copy-paste just one extra line:\\
 \\
-\textit{install\_github("shiny"); library(shiny); shiny::runGitHub("demo", "earlywarningtoolbox")}
+\textit{install.packages("shiny"); shiny::runGitHub("demo", "earlywarningtoolbox")}
+\\
 
 If everything has worked well, you should by now be in front of a window of your web-browser that should look like Fig. 3.
-
+\newpage
 \begin{figure}[ht]
-%\begin{right}
+\begin{center}
 \includegraphics[scale=0.4]{demo_start.png}
-\caption{User interface of the Indicator trend analysis of the Quick Detection.}
-%\end{right}
+\caption{User interface of the \textit{Indicator trend analysis} with Quick Detection.}
+\end{center}
 %\label{fig:simulatedQDA}
 \end{figure}
 
-You are ready to start using the Quick Detection Analysis! From the top drop-down method, you can choose the time series to use, \textit{simulated/ real-world data}, and from second top-down menu you can choose one of the three analysis that the Quick Detection offers: \textit{Indicator trend analysis, Trend significance analysis, Potential analysis}. After you choose an Analysis, different options appear.
-
+You are ready to start using the Quick Detection Analysis! From the top drop-down method, you can choose the time series to use, \textit{simulated/ real-world data}, and from second top-down menu you can choose one of the three analysis that the Quick Detection offers: \textit{Indicator trend analysis, Trend significance analysis, Potential analysis}. After you choose an Analysis, different options appear. After any of your choices press Update View. Note that some calculations may take up some time, especially of the time series is long.
+\\
+\\
 In case of the \textit{Indicator trend analysis} (Fig. 3), the options to select are:
 \begin{enumerate}
-\item  \textit{filter} (filters data using smooth, linear, or first-difference detrending)
-\item \textit{sliding window size} (the fraction along the time series to estimate variance and autocorrelation)
-\item \textit{logarithmize} (transforms the time series into logarithmic scale using \mathit{log(x=1)})
-\item \textit{interpolate} (interpolates the time series in case there are missing values)
-\end{enumerate}\\
-\\
+\item \textit{Sliding window size} (the fraction along the time series to estimate variance and autocorrelation)
+\item  \textit{Detrending} (filters data using smooth, linear, or first-difference detrending)
+\item \textit{Logarithmize} (transforms the time series into logarithmic scale using \textit{log(x=1)})
+\item \textit{Interpolate} (interpolates the time series in case there are missing values)
+\end{enumerate}
+
+\newpage
 In case of the \textit{Trend significance analysis} (Fig. 4), the options to select are:
 \begin{enumerate}
-\item  \textit{filter} (filters data using smooth, linear, or first-difference detrending)
-\item \textit{sliding window size} (the fraction along the time series to estimate variance and autocorrelation)
-\item \textit{logarithmize} (transforms the time series into logarithmic scale using \mathit{log(x=1)})
-\item \textit{interpolate} (interpolates the time series in case there are missing values)
-\item \textit{number of surrogate datasets} (to estimate a distribution of trends based from a null model without a transtion)
-\item \textit{level of significance} (to reject the null hypothesis)
-\end{enumerate}\\
-\\
+\item \textit{Sliding window size} (the fraction along the time series to estimate variance and autocorrelation)
+\item  \textit{Detrending} (filters data using smooth, linear, or first-difference detrending)
+\item \textit{Logarithmize} (transforms the time series into logarithmic scale using \textit{log(x=1)})
+\item \textit{Interpolate} (interpolates the time series in case there are missing values)
+\item \textit{Number of surrogate datasets} (to estimate a distribution of trends based from a null model without a transtion)
+\item \textit{Level of significance} (to reject the null hypothesis)
+\end{enumerate}
+
 \begin{figure}[ht]
-%\begin{right}
-\includegraphics[scale=0.4]{demo_start.png}
-\caption{User interface of the Trend significance analysis of the Quick Detection.}
-%\end{right}
+\begin{center}
+\includegraphics[scale=0.4]{demo_significance2.png}
+\caption{User interface of the \textit{Trend significance analysis} with Quick Detection.}
+\end{center}
 %\label{fig:simulatedQDA}
 \end{figure}
-
+\newpage
 In case of the \textit{Potential analysis} (Fig. 5), the options to select are:
 \begin{enumerate}
-\item \textit{threshold} (for detecting local minima ~ alternative attractors)
-\item \textit{grid size} (for determining the analysis resolution)
-\item \textit{cutoff level} (to clarify the visualization)
-\end{enumerate}\\
-\\
+\item \textit{Threshold} (for detecting local minima ~ alternative attractors)
+\item \textit{Grid size} (for determining the analysis resolution)
+\item \textit{Cutoff level} (to clarify the visualization)
+\end{enumerate}
+
 \begin{figure}[ht]
-%\begin{right}
+\begin{center}
 \includegraphics[scale=0.4]{demo_potential.png}
-\caption{Potential Analysis of the Quick Detection.}
-%\end{right}
+\caption{\textit{Potential Analysis} with Quick Detection.}
+\end{center}
 %\label{fig:simulatedQDA}
 \end{figure}
 

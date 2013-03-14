@@ -9,6 +9,7 @@ library(devtools)
 install_github(repo = "earlywarnings-R", username = "earlywarningtoolbox", subdir = "earlywarnings", ref = "master")
 library(earlywarnings)
 
+source("qda_RShiny.R")
 
 # Simulated data
 simulateddata <- read.csv("fold_simulated_data.csv")
