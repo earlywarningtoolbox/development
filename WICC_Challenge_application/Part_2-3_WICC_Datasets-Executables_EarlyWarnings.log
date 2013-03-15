@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2013.2.22)  15 MAR 2013 01:18
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2013.2.22)  15 MAR 2013 01:25
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -541,11 +541,11 @@ Package pdftex.def Info: figure_data-eps-converted-to.pdf used on input line 53
 .
 (pdftex.def)             Requested size: 431.3605pt x 147.55087pt.
 
-<R_install_ews3.png, id=35, 671.50874pt x 538.01pt>
-File: R_install_ews3.png Graphic file (type png)
- <use R_install_ews3.png>
-Package pdftex.def Info: R_install_ews3.png used on input line 76.
-(pdftex.def)             Requested size: 369.33095pt x 295.9064pt.
+<R_install_ews4.png, id=35, 672.5125pt x 533.995pt>
+File: R_install_ews4.png Graphic file (type png)
+ <use R_install_ews4.png>
+Package pdftex.def Info: R_install_ews4.png used on input line 76.
+(pdftex.def)             Requested size: 369.88301pt x 293.69815pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 60--85
 
@@ -556,7 +556,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 60--85
 
  []
 
-[2 <./figure_data-eps-converted-to.pdf>] [3 <./R_install_ews3.png>]
+[2 <./figure_data-eps-converted-to.pdf>] [3 <./R_install_ews4.png>]
 <demo_start.png, id=57, 1135.24126pt x 709.65125pt>
 File: demo_start.png Graphic file (type png)
  <use demo_start.png>
@@ -613,7 +613,7 @@ xlive/2012/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texl
 ive/2012/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb></usr/local/texliv
 e/2012/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
 Output written on Part_2-3_WICC_Datasets-Executables_EarlyWarnings.pdf (6 pages
-, 849688 bytes).
+, 852838 bytes).
 PDF statistics:
  131 PDF objects out of 1000 (max. 8388607)
  102 compressed objects within 2 object streams
