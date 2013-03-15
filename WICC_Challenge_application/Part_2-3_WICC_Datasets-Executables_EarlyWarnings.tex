@@ -59,24 +59,29 @@ For both datasets we used only the pre-transition part of the data (green shaded
 \section{Executables: Setting up the toolbox}
 In order to execute the analyses proposed from our toolbox, two things are necessary:
 1. to have access to internet,
-2. to have R project for Statistical Computing installed on a computer,
-
+2. to have R project for Statistical Computing installed on a computer.
 R can be installed as it is freely available at \url{www.r-project.org/}. Instructions of how to install it on any operating system is fully documented. If you have R already installed, you need to make sure you are using a version (R>= 2.14.0). If needed, you can run an update of R.
 Once you have installed R, start the program and, as shown in Fig. 2, copy-paste in the console:\\
+\\
+%\textit{install.packages(c("shiny","devtools")); library(devtools);\\install\_github(repo = "earlywarnings-R", username = "earlywarningtoolbox", subdir = "earlywarnings"); shiny::runGitHub("demo","earlywarningtoolbox")}
+\textit{install.packages(c("shiny","devtools","earlywarnings",''RJSONIO''));\\
+library(shiny, devtools, earlywarnings, RJSONIO)}\\
+%\textit{install.packages(c("shiny","devtools")); library(devtools);\\
+%install\_github(repo = "earlywarnings-R", username = "earlywarningtoolbox", subdir = "earlywarnings")}
+%\textit{install.packages(c("shiny","earlywarnings")); shiny::runGitHub("demo","earlywarningtoolbox")}\\
 %\textit{install.packages("devtools"); library(devtools); install\_github(repo = "earlywarnings-R", username = "earlywarningtoolbox", subdir = "earlywarnings")}\\
 %\textit{install.packages("earlywarnings")}
-\textit{install.packages(c("shiny","devtools")); library(devtools); install\_github(repo = "earlywarnings-R", username = "earlywarningtoolbox", subdir = "earlywarnings");\\shiny::runGitHub("demo","earlywarningtoolbox")}
-%\textit{install.packages(c("shiny","earlywarnings")); shiny::runGitHub("demo","earlywarningtoolbox")}\\
-\\
-Congratulations! You have just installed the Early Warning Signals Toolbox on your computer!
-
 \begin{figure}[ht]
 \begin{center}
-\includegraphics[scale=0.55]{R_install_ews2.png}
+\includegraphics[scale=0.55]{R_install_ews3.png}
 \caption{Once R is installed, copy-paste the following lines in the console and press <enter>.}
 \end{center}
 %\label{fig:simulatedQDA}
 \end{figure}
+\\
+Congratulations! You have just installed the Early Warning Signals Toolbox on your computer! Now run the earlywarnings demo by copy-pasting:\\
+\\
+\textit{shiny::runGitHub("demo","earlywarningtoolbox")}
 
 \section{Instructions: Using the toolbox}
 If everything has worked well, you should have on your screen a window of your web browser with the user interface that runs the demo of the analysis presented in Part 1 of the submission (like in Fig. 3).%What you want have now on your screen is the user interface that runs the demo of the analysis presented in Part 1 of the submission. %For this you need to copy-paste just one extra line:\\
@@ -86,6 +91,9 @@ If everything has worked well, you should have on your screen a window of your w
 
 %If everything has worked well, you should by now be in front of a window of your web-browser that looks like Fig. 3.
 
+You are now ready to start using the Quick Detection Analysis! You can re-generate the analysis presented in Part 1. To understand and interprete what you see, we refer to the paper by Dakos et al (2012) that is included in the additional material of Part 5. Remember that the Quick Detection Analysis we present here is only part of the capacities of our toolbox. The remaining methods/indicators are available through the command line version of the toolbox in R!
+
+From the top drop-down method, you can choose the time series to use, \textit{simulated/ real-world data}, and from the second drop-down menu you can choose one of the three analysis that the Quick Detection offers: \textit{Indicator trend analysis, Trend significance analysis, Potential analysis}. After you choose an Analysis, different options appear. Press \textit{Update View} to execute. Note that some calculations may take long, especially if the time series is long.
 \begin{figure}[ht]
 \begin{center}
 \includegraphics[scale=0.4]{demo_start.png}
@@ -94,28 +102,12 @@ If everything has worked well, you should have on your screen a window of your w
 %\label{fig:simulatedQDA}
 \end{figure}
 
-You are now ready to start using the Quick Detection Analysis! You can re-generate the analysis presented in Part 1. To understand and interprete what you see, we refer to the paper by Dakos et al (2012) that is included in the additional material of Part 5. Remember that the Quick Detection Analysis we present here is only part of the capacities of our toolbox. The remaining methods/indicators are available through the command line version of the toolbox in R!\\
-
-From the top drop-down method, you can choose the time series to use, \textit{simulated/ real-world data}, and from the second drop-down menu you can choose one of the three analysis that the Quick Detection offers: \textit{Indicator trend analysis, Trend significance analysis, Potential analysis}. After you choose an Analysis, different options appear. Press \textit{Update View} to execute. Note that some calculations may take long, especially if the time series is long.
-\\
-
-For the \textit{Indicator trend analysis} (Fig. 3), the options to select are:
+For the \textbf{Indicator trend analysis} (Fig. 3), the options to select are:
 \begin{enumerate}
 \item \textit{Sliding window size} (the fraction along the time series to estimate variance and autocorrelation)
 \item  \textit{Detrending} (filters data using smooth, linear, or first-difference detrending)
 \item \textit{Logarithmize} (transforms the time series into logarithmic scale using \textit{log(x=1)})
 \item \textit{Interpolate} (interpolates the time series in case there are missing values)
-\end{enumerate}
-
-\newpage
-For the \textit{Trend significance analysis} (Fig. 4), the options to select are:
-\begin{enumerate}
-\item \textit{Sliding window size} (the fraction along the time series to estimate variance and autocorrelation)
-\item  \textit{Detrending} (filters data using smooth, linear, or first-difference detrending)
-\item \textit{Logarithmize} (transforms the time series into logarithmic scale using \textit{log(x=1)})
-\item \textit{Interpolate} (interpolates the time series in case there are missing values)
-\item \textit{Number of surrogate datasets} (to estimate a distribution of trends based from a null model without a transtion)
-\item \textit{Level of significance} (to reject the null model hypothesis)
 \end{enumerate}
 
 \begin{figure}[ht]
@@ -125,14 +117,19 @@ For the \textit{Trend significance analysis} (Fig. 4), the options to select are
 \end{center}
 %\label{fig:simulatedQDA}
 \end{figure}
+
 \newpage
-For the \textit{Potential analysis} (Fig. 5), the options to select are:
+For the \textbf{Trend significance analysis} (Fig. 4), the options to select are:
 \begin{enumerate}
-\item \textit{Threshold} (for detecting local minima ~ alternative attractors)
-\item \textit{Grid size} (for determining the analysis resolution)
-\item \textit{Cutoff level} (to clarify the visualization)
+\item \textit{Sliding window size} (the fraction along the time series to estimate variance and autocorrelation)
+\item  \textit{Detrending} (filters data using smooth, linear, or first-difference detrending)
+\item \textit{Logarithmize} (transforms the time series into logarithmic scale using \textit{log(x=1)})
+\item \textit{Interpolate} (interpolates the time series in case there are missing values)
+\item \textit{Number of surrogate datasets} (to estimate a distribution of trends based from a null model without a transtion)
+\item \textit{Level of significance} (to reject the null model hypothesis)
 \end{enumerate}
 
+\newpage
 \begin{figure}[ht]
 \begin{center}
 \includegraphics[scale=0.4]{demo_potential.png}
@@ -140,6 +137,13 @@ For the \textit{Potential analysis} (Fig. 5), the options to select are:
 \end{center}
 %\label{fig:simulatedQDA}
 \end{figure}
+
+For the \textbf{Potential analysis} (Fig. 5), the options to select are:
+\begin{enumerate}
+\item \textit{Threshold} (for detecting local minima ~ alternative attractors)
+\item \textit{Grid size} (for determining the analysis resolution)
+\item \textit{Cutoff level} (to clarify the visualization)
+\end{enumerate}
 
 \end{doublespacing}
 
