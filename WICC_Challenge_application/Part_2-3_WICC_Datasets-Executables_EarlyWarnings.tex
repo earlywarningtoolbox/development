@@ -61,11 +61,14 @@ In order to execute the analyses proposed from our toolbox, two things are neces
 1. to have access to internet,
 2. to have R project for Statistical Computing installed on a computer.
 R can be installed as it is freely available at \url{www.r-project.org/}. Instructions of how to install it on any operating system is fully documented. If you have R already installed, you need to make sure you are using a version (R>= 2.14.0). If needed, you can run an update of R.
-Once you have installed R, start the program and, as shown in Fig. 2, copy-paste in the console:\\
+Once you have installed R, start the program and, as shown in Fig. 2, copy-paste in the console and press <enter>:\\
 \\
 %\textit{install.packages(c("shiny","devtools")); library(devtools);\\install\_github(repo = "earlywarnings-R", username = "earlywarningtoolbox", subdir = "earlywarnings"); shiny::runGitHub("demo","earlywarningtoolbox")}
-\textit{install.packages(c("shiny","devtools","earlywarnings","RJSONIO"));\\
-library(shiny, devtools, earlywarnings, RJSONIO)}\\
+\textit{%\#Install libraries\\%
+install.packages(c("shiny","RJSONIO","earlywarnings"))}\\
+%wait for the installations and when done, copy-paste:\\
+%\#Load libraries\\%
+%\textit{library(shiny); library(RJSONIO); library(earlywarnings)}\\
 %\textit{install.packages(c("shiny","devtools")); library(devtools);\\
 %install\_github(repo = "earlywarnings-R", username = "earlywarningtoolbox", subdir = "earlywarnings")}
 %\textit{install.packages(c("shiny","earlywarnings")); shiny::runGitHub("demo","earlywarningtoolbox")}\\
@@ -73,15 +76,16 @@ library(shiny, devtools, earlywarnings, RJSONIO)}\\
 %\textit{install.packages("earlywarnings")}
 \begin{figure}[ht]
 \begin{center}
-\includegraphics[scale=0.55]{R_install_ews4.png}
+\includegraphics[scale=0.55]{R_install_ews5.png}
 \caption{Once R is installed, copy-paste the following lines in the console and press <enter>.}
 \end{center}
 %\label{fig:simulatedQDA}
 \end{figure}
 \\
+\\
 Congratulations! You have just installed the Early Warning Signals Toolbox on your computer! Now run the earlywarnings demo by copy-pasting and pressing <enter>:\\
 \\
-\textit{shiny::runGitHub("demo","earlywarningtoolbox")}
+\textit{library(shiny);library(RJSONIO);shiny::runGitHub("demo","earlywarningtoolbox")}
 
 \section{Instructions: Using the toolbox}
 If everything has worked well, you should have on your screen a window of your web browser with the user interface that runs the demo of the analysis presented in Part 1 of the submission (like in Fig. 3).%What you want have now on your screen is the user interface that runs the demo of the analysis presented in Part 1 of the submission. %For this you need to copy-paste just one extra line:\\

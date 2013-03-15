@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2013.2.22)  15 MAR 2013 01:25
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2013.2.22)  15 MAR 2013 01:48
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -541,36 +541,42 @@ Package pdftex.def Info: figure_data-eps-converted-to.pdf used on input line 53
 .
 (pdftex.def)             Requested size: 431.3605pt x 147.55087pt.
 
-<R_install_ews4.png, id=35, 672.5125pt x 533.995pt>
-File: R_install_ews4.png Graphic file (type png)
- <use R_install_ews4.png>
-Package pdftex.def Info: R_install_ews4.png used on input line 76.
-(pdftex.def)             Requested size: 369.88301pt x 293.69815pt.
+<R_install_ews5.png, id=35, 671.50874pt x 539.01375pt>
+File: R_install_ews5.png Graphic file (type png)
 
-Underfull \hbox (badness 10000) in paragraph at lines 60--85
+<use R_install_ews5.png>
+Package pdftex.def Info: R_install_ews5.png used on input line 79.
+(pdftex.def)             Requested size: 369.33095pt x 296.45847pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--89
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--89
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 60--85
+Underfull \hbox (badness 10000) in paragraph at lines 60--89
 
  []
 
-[2 <./figure_data-eps-converted-to.pdf>] [3 <./R_install_ews4.png>]
+[2 <./figure_data-eps-converted-to.pdf>] [3 <./R_install_ews5.png>]
 <demo_start.png, id=57, 1135.24126pt x 709.65125pt>
 File: demo_start.png Graphic file (type png)
  <use demo_start.png>
-Package pdftex.def Info: demo_start.png used on input line 99.
+Package pdftex.def Info: demo_start.png used on input line 103.
 (pdftex.def)             Requested size: 454.08846pt x 283.85547pt.
 
 <demo_significance2.png, id=58, 1166.3575pt x 699.61375pt>
 File: demo_significance2.png Graphic file (type png)
 
 <use demo_significance2.png>
-Package pdftex.def Info: demo_significance2.png used on input line 115.
+Package pdftex.def Info: demo_significance2.png used on input line 119.
 (pdftex.def)             Requested size: 466.53474pt x 279.84055pt.
 
-Overfull \hbox (5.59975pt too wide) in paragraph at lines 115--116
+Overfull \hbox (5.59975pt too wide) in paragraph at lines 119--120
  [] 
  []
 
@@ -579,19 +585,19 @@ Overfull \hbox (5.59975pt too wide) in paragraph at lines 115--116
 File: demo_potential.png Graphic file (type png)
 
 <use demo_potential.png>
-Package pdftex.def Info: demo_potential.png used on input line 135.
+Package pdftex.def Info: demo_potential.png used on input line 139.
 (pdftex.def)             Requested size: 454.89145pt x 238.08528pt.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 151.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 155.
  [6 <./demo_potential.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 151.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 155.
 
 (./Part_2-3_WICC_Datasets-Executables_EarlyWarnings.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 151.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 151.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 155.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 155.
 Package rerunfilecheck Info: File `Part_2-3_WICC_Datasets-Executables_EarlyWarn
 ings.out' has not changed.
 (rerunfilecheck)             Checksum: 774D615E800A0588D2100CA18EC1ABCC;179.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 151.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 155.
  ) 
 Here is how much of TeX's memory you used:
  7545 strings out of 493488
@@ -613,7 +619,7 @@ xlive/2012/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texl
 ive/2012/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb></usr/local/texliv
 e/2012/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
 Output written on Part_2-3_WICC_Datasets-Executables_EarlyWarnings.pdf (6 pages
-, 852838 bytes).
+, 848522 bytes).
 PDF statistics:
  131 PDF objects out of 1000 (max. 8388607)
  102 compressed objects within 2 object streams
