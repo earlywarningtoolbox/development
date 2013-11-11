@@ -1,46 +1,45 @@
-This is BibTeX, Version 0.99d (TeX Live 2012)
-Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+This is BibTeX, Version 0.99c (Web2C 7.5.7)
 The top-level auxiliary file: Part_1_WICC_Submission_EarlyWarnings.aux
 The style file: unsrt.bst
 Database file #1: WICC_bibl.bib
-You've used 24 entries,
+You've used 26 entries,
             1791 wiz_defined-function locations,
-            637 strings with 8435 characters,
-and the built_in function-call counts, 6514 in all, are:
-= -- 554
-> -- 384
+            649 strings with 8852 characters,
+and the built_in function-call counts, 6902 in all, are:
+= -- 589
+> -- 403
 < -- 0
-+ -- 138
-- -- 114
-* -- 606
-:= -- 1083
-add.period$ -- 72
-call.type$ -- 24
-change.case$ -- 24
++ -- 145
+- -- 119
+* -- 634
+:= -- 1149
+add.period$ -- 78
+call.type$ -- 26
+change.case$ -- 26
 chr.to.int$ -- 0
-cite$ -- 24
-duplicate$ -- 217
-empty$ -- 567
-format.name$ -- 114
-if$ -- 1348
+cite$ -- 26
+duplicate$ -- 234
+empty$ -- 603
+format.name$ -- 119
+if$ -- 1431
 int.to.chr$ -- 0
-int.to.str$ -- 24
-missing$ -- 25
-newline$ -- 123
-num.names$ -- 24
-pop$ -- 28
+int.to.str$ -- 26
+missing$ -- 27
+newline$ -- 133
+num.names$ -- 26
+pop$ -- 30
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 75
+skip$ -- 83
 stack$ -- 0
-substring$ -- 559
-swap$ -- 24
+substring$ -- 578
+swap$ -- 26
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 69
-width$ -- 26
-write$ -- 267
+while$ -- 73
+width$ -- 28
+write$ -- 289

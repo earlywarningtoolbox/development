@@ -144,4 +144,17 @@ V.~Dakos, S.~R. Carpenter, W.~A. Brock, A.~M. Ellison, V.~Guttal, A.~R. Ives,
   series illustrated using simulated ecological data.}
 \newblock {\em PLoS ONE}, 7(7):e41010, 2012.
 
+\bibitem{Kwasniok2009}
+Frank Kwasniok and Gerrit Lohmann.
+\newblock {Deriving dynamical models from paleoclimatic records: application to
+  glacial millennial-scale climate variability.}
+\newblock {\em Physical Review E - Statistical, Nonlinear, and Soft Matter
+  Physics}, 80, December 2009.
+
+\bibitem{Livina2010}
+V~N Livina, F~Kwasniok, and T~M Lenton.
+\newblock {Potential analysis reveals changing number of climate states during
+  the last 60 kyr}.
+\newblock {\em Climate of the Past}, 6(1):77--82, 2010.
+
 \end{thebibliography}
