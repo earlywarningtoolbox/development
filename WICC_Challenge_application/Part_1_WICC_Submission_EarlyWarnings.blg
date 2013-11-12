@@ -2,44 +2,44 @@ This is BibTeX, Version 0.99c (Web2C 7.5.7)
 The top-level auxiliary file: Part_1_WICC_Submission_EarlyWarnings.aux
 The style file: unsrt.bst
 Database file #1: WICC_bibl.bib
-You've used 26 entries,
+You've used 27 entries,
             1791 wiz_defined-function locations,
-            649 strings with 8852 characters,
-and the built_in function-call counts, 6902 in all, are:
-= -- 589
-> -- 403
+            657 strings with 9054 characters,
+and the built_in function-call counts, 7199 in all, are:
+= -- 615
+> -- 420
 < -- 0
-+ -- 145
-- -- 119
-* -- 634
-:= -- 1149
-add.period$ -- 78
-call.type$ -- 26
-change.case$ -- 26
++ -- 151
+- -- 124
+* -- 662
+:= -- 1197
+add.period$ -- 81
+call.type$ -- 27
+change.case$ -- 27
 chr.to.int$ -- 0
-cite$ -- 26
-duplicate$ -- 234
-empty$ -- 603
-format.name$ -- 119
-if$ -- 1431
+cite$ -- 27
+duplicate$ -- 243
+empty$ -- 629
+format.name$ -- 124
+if$ -- 1493
 int.to.chr$ -- 0
-int.to.str$ -- 26
-missing$ -- 27
-newline$ -- 133
-num.names$ -- 26
-pop$ -- 30
+int.to.str$ -- 27
+missing$ -- 28
+newline$ -- 138
+num.names$ -- 27
+pop$ -- 31
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 83
+skip$ -- 86
 stack$ -- 0
-substring$ -- 578
-swap$ -- 26
+substring$ -- 609
+swap$ -- 27
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 73
-width$ -- 28
-write$ -- 289
+while$ -- 76
+width$ -- 29
+write$ -- 300
